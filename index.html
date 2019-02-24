@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DBFilms.com</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Bootstrap CSS-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+		<!--Font awesome-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!--Main CSS-->
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<!--Google fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	</head>
+
+	<body id="main_body">
+
+		<div class="container" id="cuerpo">
+			<!--Principal-->
+			<div class="row">
+				<!--Logo & description-->
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<img class="img-fluid" src="img/logo.png">
+				</div>
+				<!--Login / register-->
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<div class="row">
+						<div id="form-container">
+							<div class="form-group p-2 mt-3">
+								<button class="custom-btn" type="button" data-toggle="collapse" data-target="#login">Login</button>
+							</div>
+							<div class="form-group p-2 mt-3">
+								<button class="custom-btn" type="button" data-toggle="collapse" data-target="#register">Registro</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Collapse-->
+			<div class="collapse mt-5" id="login">
+				<!--Login-->
+				<form id="formulario">
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-envelope"></i></span>
+							</div>
+							<input type="email" class="form-control" placeholder="email">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-lock"></i></span>
+							</div>
+							<input type="password" class="form-control" placeholder="contraseña">
+						</div>
+					</div>
+					<button class="custom-btn" type="submit">Entrar</button>
+				</form>
+			</div>
+
+			<!--Registro-->
+			<div class="collapse mt-5" id="register">
+				<form id="formulario">
+					<!--Nombre-->
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-user"></i></span>
+							</div>
+							<input type="email" class="form-control" placeholder="nombre">
+						</div>
+					</div>
+					<!--email-->
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-envelope"></i></span>
+							</div>
+							<input type="email" class="form-control" placeholder="email">
+						</div>
+					</div>
+					<!--password-->
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-lock"></i></span>
+							</div>
+							<input type="password" class="form-control" placeholder="contraseña">
+						</div>
+					</div>
+					<!--repeat password-->
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-lock"></i></span>
+							</div>
+							<input type="password" class="form-control" placeholder="repetir contraseña">
+						</div>
+					</div>
+					<hr>
+					<!--Nombre real-->
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-user"></i></span>
+							</div>
+							<input type="password" class="form-control" placeholder="nombre real">
+						</div>
+					</div>
+					<!--fecha nacimiento-->
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-calendar"></i></span>
+							</div>
+							<input type="password" class="form-control" placeholder="fecha nacimiento">
+						</div>
+					</div>
+					<button class="custom-btn" type="submit">Registrar</button>
+				</form>
+			</div>
+
+		</div>
+
+	    <!--Scripts de bootstrap-->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	    <!--Main js-->
+		<script type="text/javascript" src="js/js.js"></script>
+	</body>
+</html>

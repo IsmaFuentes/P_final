@@ -1,0 +1,93 @@
+/**MAINPAGE**/
+
+#main_body{
+	background: linear-gradient(to right, rgb(211, 131, 18), rgb(168, 50, 121));
+	font-family: 'Montserrat', sans-serif;
+	/*background: linear-gradient(to right, rgb(198, 255, 221), rgb(251, 215, 134), rgb(247, 121, 125));*/
+	/*background: linear-gradient(to right, rgb(233, 100, 67), rgb(144, 78, 149));*/
+}
+
+#cuerpo {
+	margin-top: 40vh;
+}
+
+.custom-btn{
+	border: none;
+	padding: 7px;
+	color: white;
+	background-color: #F5A754;
+	border-radius: 5px;
+	font-size: 15px;
+	outline: none;
+}
+
+.custom-btn:hover{
+	background-color: #F7BC7C;
+}
+
+.input-group-text{
+	background-color: #F5A754;
+	border: #F7BC7C;
+	color: white;
+}
+
+#form-container{
+	margin-left: auto;
+	display: flex;
+}
+
+#formulario{
+	width: 75%;
+	margin:auto;
+}
+
+@media only screen and (max-width: 990px) {
+	#form-container{
+		margin:auto;
+	}	
+}
+
+/**USER PAGE**/
+#user_body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+	background-color: #F5A754;
+	padding: 12px;
+}
+
+.custom-link{
+	color: white;
+	padding: 3px;
+	display: flex;
+	margin-left: 5px;
+}
+.custom-link:hover{
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
+	text-decoration: none;
+}
+.current-active{
+	text-transform: uppercase;
+}
+
+.col{
+	border:1px solid black;
+}
+
+.img-container{
+	width: 40%;
+	margin: auto;
+}
+
+#nav_logo{
+	background-image: url("../img/logo.png");
+	width: 150px;
+	height: 25px;
+	background-size: cover;
+}
+
+#menu-ico{
+	color: white;
+}
