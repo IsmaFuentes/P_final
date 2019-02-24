@@ -48,6 +48,10 @@
 }
 
 /**USER PAGE**/
+.card-header{
+	background-color: #F7BC7C;
+}
+
 #user_body{
 	font-family: 'Montserrat', sans-serif;
 }
@@ -61,24 +65,35 @@
 	color: white;
 	padding: 3px;
 	display: flex;
-	margin-left: 5px;
+	margin-left: 10px;
 }
 .custom-link:hover{
 	color: white;
 	text-shadow: 2px 2px 4px #000000;
 	text-decoration: none;
 }
+
+.active-link{
+	padding: 3px;
+	display: flex;
+	margin-left: 10px;
+}
+.active-link:hover{
+	color: black;
+	text-shadow: 2px 2px 4px #000000;
+	text-decoration: none;
+}
+
 .current-active{
 	text-transform: uppercase;
 }
 
-.col{
-	border:1px solid black;
-}
-
-.img-container{
-	width: 40%;
-	margin: auto;
+.activo{
+	color: black;
+	background-color: white;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	padding:5px;
 }
 
 #nav_logo{
