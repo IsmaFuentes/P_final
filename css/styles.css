@@ -37,7 +37,7 @@
 }
 
 #formulario{
-	width: 75%;
+	width: 55%;
 	margin:auto;
 }
 
@@ -45,12 +45,17 @@
 	#form-container{
 		margin:auto;
 	}	
+	#formulario{
+		width: 75%;
+		margin:auto;
+	}
 }
 
-/**USER PAGE**/
-.card-header{
+/**SERIES PAGE**/
+.orange{
 	background-color: #F7BC7C;
 }
+
 
 #user_body{
 	font-family: 'Montserrat', sans-serif;
@@ -97,12 +102,23 @@
 }
 
 #nav_logo{
-	background-image: url("../img/logo.png");
+	background-image: url("../img/logo2.png");
 	width: 150px;
-	height: 25px;
+	height: 30px;
 	background-size: cover;
 }
 
 #menu-ico{
+	color: white;
+}
+
+.film-footer{
+	border: 1px solid #F5A754;
+	border-top:none;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+	background-color: #F7BC7C;
+	color: black;
+	text-align: center;
 	color: white;
 }
