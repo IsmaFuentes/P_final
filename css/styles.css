@@ -1,5 +1,4 @@
 /**MAINPAGE**/
-
 #main_body{
 	background: linear-gradient(to right, rgb(211, 131, 18), rgb(168, 50, 121));
 	font-family: 'Montserrat', sans-serif;
@@ -51,6 +50,14 @@
 	}
 }
 
+/**
+
+	Colores:
+	- Primario: orange F5A754;
+	- Secundario: orange F7BC7C;
+	- Otros: gray D7D7CE;
+
+**/
 /**SERIES PAGE**/
 .orange{
 	background-color: #F7BC7C;
@@ -69,12 +76,12 @@
 .custom-link{
 	color: white;
 	padding: 3px;
+	padding-left: 10px;
 	display: flex;
-	margin-left: 10px;
 }
+
 .custom-link:hover{
 	color: white;
-	text-shadow: 2px 2px 4px #000000;
 	text-decoration: none;
 }
 
@@ -85,7 +92,6 @@
 }
 .active-link:hover{
 	color: black;
-	text-shadow: 2px 2px 4px #000000;
 	text-decoration: none;
 }
 
@@ -121,4 +127,24 @@
 	color: black;
 	text-align: center;
 	color: white;
+}
+
+.card{
+	background-color: #D7D7CE;
+}
+
+#pagination{
+
+}
+
+#footer{
+	background-color: #F5A754;
+	padding: 12px;	
+	color: white;
+}
+
+@media only screen and (max-width: 990px) {
+	#filtros{
+		display: none;
+	}
 }

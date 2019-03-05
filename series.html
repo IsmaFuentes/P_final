@@ -27,6 +27,7 @@
 				<a href="#" class="custom-link">peliculas</a>
 				<a href="#" class="custom-link">listas</a>
 				<a href="#" class="custom-link">favoritos</a>
+				<a href="#" class="custom-link ml-auto"><i class="fa fa-user"></i></a>
 			</div>
 		</nav>
 
@@ -51,7 +52,7 @@
 	            <!--contents-->
 				<div class="row">
 					<!--columna 1-->
-					<div class="col-8">
+					<div class="col-lg-8 col-sm-12">
 
 						<!--Fila de peliculas 1-->
 						<div class="row mt-2">
@@ -132,7 +133,7 @@
 						</div>
 
 						<!--Paginación-->
-						<nav aria-label="Paginación" class="mt-4">
+						<nav aria-label="Paginación" class="mt-4" id="pagination">
 						  <ul class="pagination">
 						    <li class="page-item">
 						      <a class="page-link" href="#" aria-label="Previous">
@@ -155,7 +156,7 @@
 					</div>
 
 					<!--columna 2-->
-					<div class="col-4">
+					<div class="col-4" id="filtros">
 						<!--panel 1-->
 						<div class="card mt-2">
 					    	<div class="card-header">Filtrar por duración</div>
@@ -186,7 +187,18 @@
 				</div>
 			</div>
 
+		<!--Final del contenedor-->
+		</div>
 
+		<!--footer-->
+		<div id="footer" class="mt-5">
+			<div class="container-fluid text-center">
+				<img src="img/logo2.png" width="200px" class="mb-2">
+				<br>
+				<i class="fab fa-facebook-square fa-2x"></i>
+				<i class="fab fa-instagram fa-2x"></i>
+				<i class="fab fa-twitter-square fa-2x"></i>
+			</div>
 		</div>
 
 	    <!--Scripts de bootstrap-->
