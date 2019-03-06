@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Series</title>
+		<title>Listas</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!--Bootstrap CSS-->
@@ -23,9 +23,9 @@
 			</button>
 			<!--izquierda-->
 			<div class="collapse navbar-collapse" id="nav-content">
-				<a href="#" class="custom-link current-active">series</a>
+				<a href="#" class="custom-link">series</a>
 				<a href="#" class="custom-link">peliculas</a>
-				<a href="#" class="custom-link">listas</a>
+				<a href="#" class="custom-link current-active">listas</a>
 				<a href="#" class="custom-link">favoritos</a>
 				<a href="#" class="custom-link ml-auto"><i class="fa fa-user"></i></a>
 			</div>
@@ -37,17 +37,17 @@
             <div class="card-header orange">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a href="#" class="active-link activo">Novedades</a>
+                        <a href="#" class="active-link activo">Todas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="custom-link">Mas vistas</a>
+                        <a href="#" class="custom-link">Más valoradas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="custom-link">Todas</a>
+                        <a href="#" class="custom-link">Favoritos</a>
                     </li>
                     <li class="nav-item" id="hidden">
                         <button type="button" class="btn custom-link" data-toggle="modal" data-target="#modalfiltros">
-                        Filtros
+                        	<i class="fa fa-filter"></i>
                     	</button>
                     </li>
                 </ul>
@@ -107,82 +107,112 @@
 					<!--columna 1-->
 					<div class="col-lg-8 col-sm-12">
 
-						<!--Fila de peliculas 1-->
+						<!--Listas-->
 						<div class="row mt-2">
-							<div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
-                                </a>
-                                <div class="film-footer">
-                                	<p class="pt-1">Deadpool 2</p>
-                            	</div>
+
+							<!--lista 1-->
+							<div class="col-12 mt-2">
+								<!--Lista de peliculas/series con carousel-->
+								<div id="carousel" class="carousel slide" data-ride="carousel">
+									<!--slides-->
+									<h6>El señor de los anillos</h6>
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<div class="row">
+												<!--item 1-->
+												<div class="col-3">
+													<a href="#">
+														<img src="img/señoranillos.jpg" class="img-fluid">
+													</a>	
+												</div>
+												<!--item 2-->
+												<div class="col-3">
+													<a href="#">
+														<img src="img/señoranillos.jpg" class="img-fluid">
+													</a>	
+												</div>
+												<!--item 3-->
+												<div class="col-3">
+													<a href="#">
+														<img src="img/señoranillos.jpg" class="img-fluid">
+													</a>	
+												</div>
+												<!--item 4-->
+												<div class="col-3">
+													<a href="#">
+														<img src="img/señoranillos.jpg" class="img-fluid">
+													</a>	
+												</div>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<div class="row">
+												<!--item 1-->
+												<div class="col-3">
+													<a href="#">
+														<img src="img/señoranillos.jpg" class="img-fluid">
+													</a>	
+												</div>
+												<!--item 2-->
+												<div class="col-3">
+													<a href="#">
+														<img src="img/señoranillos.jpg" class="img-fluid">
+													</a>	
+												</div>
+												<!--item 3-->
+												<div class="col-3">
+													<a href="#">
+														<img src="img/señoranillos.jpg" class="img-fluid">
+													</a>	
+												</div>
+												<!--item 4-->
+												<div class="col-3">
+													<a href="#">
+														<img src="img/señoranillos.jpg" class="img-fluid">
+													</a>	
+												</div>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<div class="row">
+												<!--item 1-->
+												<div class="col-3">
+													<a href="#">
+														<img src="img/señoranillos.jpg" class="img-fluid">
+													</a>	
+												</div>
+												<!--item 2-->
+												<div class="col-3">
+													<a href="#">
+														<img src="img/señoranillos.jpg" class="img-fluid">
+													</a>	
+												</div>
+												<!--item 3-->
+												<div class="col-3">
+													<a href="#">
+														<img src="img/señoranillos.jpg" class="img-fluid">
+													</a>	
+												</div>
+												<!--item 4-->
+												<div class="col-3">
+													<a href="#">
+														<img src="img/señoranillos.jpg" class="img-fluid">
+													</a>	
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--Left & right controls-->
+									<a class="carousel-control-prev" href="#carousel" data-slide="prev">
+										<span class="carousel-control-prev-icon"></span>
+									</a>
+									<a class="carousel-control-next" href="#carousel" data-slide="next">
+									    <span class="carousel-control-next-icon"></span>
+									</a>
+								</div>
+							<!--final lista 1-->
 							</div>
 
-							<div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
-                                </a>
-                                <div class="film-footer">
-                                	<p class="pt-1">Deadpool 2</p>
-                            	</div>
-							</div>
-
-                            <div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
-                                </a>
-                                <div class="film-footer">
-                                	<p class="pt-1">Deadpool 2</p>
-                            	</div>
-                            </div>
-
-                            <div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
-                                </a>
-                                <div class="film-footer">
-                                	<p class="pt-1">Deadpool 2</p>
-                            	</div>
-                            </div>
-						</div>
-
-						<!--fila de peliculas 2-->
-						<div class="row mt-2">
-							<div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
-                                </a>
-                                <div class="film-footer">
-                                	<p class="pt-1">Deadpool 2</p>
-                            	</div>
-							</div>
-
-							<div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
-                                </a>
-                                <div class="film-footer">
-                                	<p class="pt-1">Deadpool 2</p>
-                            	</div>
-							</div>
-
-                            <div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
-                                </a>
-                                <div class="film-footer">
-                                	<p class="pt-1">Deadpool 2</p>
-                            	</div>
-                            </div>
-
-                            <div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
-                                </a>
-                                <div class="film-footer">
-                                	<p class="pt-1">Deadpool 2</p>
-                            	</div>
-                            </div>
 						</div>
 
 						<!--Paginación-->

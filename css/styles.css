@@ -133,8 +133,15 @@
 	background-color: #D7D7CE;
 }
 
-#pagination{
+.page-link{
+	color: black;
+}
+.page-link:hover{
+	color: black;
+}
 
+#hidden{
+	display: none;
 }
 
 #footer{
@@ -143,8 +150,12 @@
 	color: white;
 }
 
+
 @media only screen and (max-width: 990px) {
 	#filtros{
 		display: none;
+	}
+	#hidden{
+		display: block;
 	}
 }
