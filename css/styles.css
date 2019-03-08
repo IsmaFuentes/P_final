@@ -1,9 +1,8 @@
-/**MAINPAGE**/
+/************MAINPAGE************/
+
 #main_body{
 	background: linear-gradient(to right, rgb(211, 131, 18), rgb(168, 50, 121));
 	font-family: 'Montserrat', sans-serif;
-	/*background: linear-gradient(to right, rgb(198, 255, 221), rgb(251, 215, 134), rgb(247, 121, 125));*/
-	/*background: linear-gradient(to right, rgb(233, 100, 67), rgb(144, 78, 149));*/
 }
 
 #cuerpo {
@@ -50,6 +49,9 @@
 	}
 }
 
+
+/************************************************************************************/
+
 /**
 
 	Colores:
@@ -58,7 +60,8 @@
 	- Otros: gray D7D7CE;
 
 **/
-/**SERIES PAGE**/
+
+/***************SERIES PAGE**********************/
 .orange{
 	background-color: #F7BC7C;
 }
@@ -158,4 +161,21 @@
 	#hidden{
 		display: block;
 	}
+}
+
+/*******************************************************/
+
+
+/****************Lists page*****************************/
+.item-lista{
+	width: 70%;
+	height: auto;
+}
+
+@media only screen and (max-width: 990px) {
+	.item-lista{
+		width: 85%;
+		height: auto;
+	}
+
 }
