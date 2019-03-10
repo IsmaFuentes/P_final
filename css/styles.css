@@ -54,10 +54,13 @@
 
 /**
 
-	Colores:
+	Colores principales:
 	- Primario: orange F5A754;
 	- Secundario: orange F7BC7C;
-	- Otros: gray D7D7CE;
+
+	Otros: 
+	- gray: D7D7CE;
+	- ligth gray: B2B0B0;
 
 **/
 
@@ -168,13 +171,20 @@
 
 /****************Lists page*****************************/
 .item-lista{
-	width: 70%;
+	width: 80%;
 	height: auto;
+}
+
+.carousel{
+	background-color: #D7D7CE;
+	padding: 10px;
+	border: 1px solid #B2B0B0;
+	border-radius: 7px;
 }
 
 @media only screen and (max-width: 990px) {
 	.item-lista{
-		width: 85%;
+		width: 100%;
 		height: auto;
 	}
 
