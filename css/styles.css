@@ -6,7 +6,7 @@
 }
 
 #cuerpo {
-	margin-top: 40vh;
+	margin-top: 35vh;
 }
 
 .custom-btn{
@@ -30,6 +30,7 @@
 }
 
 #form-container{
+	margin-top: 75px;
 	margin-left: auto;
 	display: flex;
 }
@@ -64,7 +65,7 @@
 
 **/
 
-/***************SERIES PAGE**********************/
+/***************PÁGINA SERIES**********************/
 .orange{
 	background-color: #F7BC7C;
 }
@@ -114,10 +115,12 @@
 }
 
 #nav_logo{
-	background-image: url("../img/logo2.png");
+	background-image: url("../img/logo.png");
 	width: 150px;
 	height: 30px;
-	background-size: cover;
+	background-size: 130px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
 }
 
 #menu-ico{
@@ -125,14 +128,17 @@
 }
 
 .film-footer{
-	border: 1px solid #F5A754;
+	border: 1px solid #B2B0B0;
 	border-top:none;
 	border-bottom-right-radius: 12px;
 	border-bottom-left-radius: 12px;
-	background-color: #F7BC7C;
-	color: black;
+	background-color: #D7D7CE;
 	text-align: center;
 	color: white;
+}
+
+.film-text {
+	color: black;
 }
 
 .card{
@@ -169,7 +175,7 @@
 /*******************************************************/
 
 
-/****************Lists page*****************************/
+/****************PÁGINA LISTAS*****************************/
 .item-lista{
 	width: 80%;
 	height: auto;
@@ -189,3 +195,8 @@
 	}
 
 }
+
+/*******************************************************/
+
+
+/****************PÁGINA FAVORITOS*****************************/
