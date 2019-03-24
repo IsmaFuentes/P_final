@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pelicula</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Bootstrap CSS-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+		<!--Font awesome-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!--Main CSS-->
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<!--Google fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	</head>
+
+	<body id="user_body">
+		<!--Navbar-->
+		<nav class="navbar navbar-expand-md">
+			<span id="nav_logo" class="navbar-brand"></span>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
+				<i class="fa fa-bars" id="menu-ico"></i>
+			</button>
+			<!--izquierda-->
+			<div class="collapse navbar-collapse" id="nav-content">
+				<a href="series.html" class="custom-link">series</a>
+				<a href="peliculas.html" class="custom-link">peliculas</a>
+				<a href="listas.html" class="custom-link">listas</a>
+				<a href="favoritos.html" class="custom-link">favoritos</a>
+				<a href="#" class="custom-link ml-auto"><i class="fa fa-user"></i></a>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+
+			<!--Pelicula--->
+			<div class="row mt-3">
+				<div class="col-3">
+					<img src="../img/deadpool.jpg" class="card-img img-fluid" alt="img película">
+				</div>
+			<!--Información-->
+				<div class="col-9">
+					<h4>Deadpool 2</h4><hr>
+					<h5>Información</h5>
+					<!--Valoraciones-->
+					<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+					<span>4 de 1128</span>
+
+					<br>
+					<!--Tipo de pelicula-->
+					<b>Comedia - Acción - Superhéroes</b>
+					<br>
+
+					<!--Duración de la pelicula-->
+					<p>Duración: 112'</p>
+
+					<!--Información (solo PC)-->	
+					<div class="d-none d-sm-block">
+						<h5>Sinopsis</h5>
+						<p class="text-justify">
+							Deadpool 24​ es una película de superhéroes estadounidense de 2018, basada en el personaje de Marvel Comics Deadpool y distribuida por 20th Century Fox. Es la duodécima película de la saga de películas de X-Men, y una secuela directa de Deadpool, película de 2016. 
+							<br>La cinta está dirigida por David Leitch y regresan como guionistas Rhet Reese y Paul Wernick, contando con la protagonización principal de Ryan Reynolds, Morena Baccarin, T. J. Miller, Leslie Uggams, Brianna Hildebrand, Stefan Kapičić y Josh Brolin. Zazie Beetz y Jack Kesy interpretan además a dos personajes nuevos.
+						</p>
+					</div>
+				</div>
+
+			</div>
+			
+			<!--Información (solo telefono)-->		
+			<div class="mt-3 d-block d-sm-none">
+				<h5>Sinopsis</h5>
+				<p class="text-justify">
+					Deadpool 24​ es una película de superhéroes estadounidense de 2018, basada en el personaje de Marvel Comics Deadpool y distribuida por 20th Century Fox. Es la duodécima película de la saga de películas de X-Men, y una secuela directa de Deadpool, película de 2016. 
+					<br>La cinta está dirigida por David Leitch y regresan como guionistas Rhet Reese y Paul Wernick, contando con la protagonización principal de Ryan Reynolds, Morena Baccarin, T. J. Miller, Leslie Uggams, Brianna Hildebrand, Stefan Kapičić y Josh Brolin. Zazie Beetz y Jack Kesy interpretan además a dos personajes nuevos.
+				</p>
+			</div>
+
+			<!--Links-->
+			<div class="mt-3">
+				<h5>Enlaces</h5>
+				<ul class="list-group">
+				  <li class="list-group-item d-flex justify-content-between align-items-center">
+				    Español subtitulado
+				    <button class="btn btn-primary badge badge-primary badge-pill">v</button>
+				  </li>
+				  <li class="list-group-item d-flex justify-content-between align-items-center">
+				    Español Castellano
+				    <button class="btn btn-primary badge badge-primary badge-pill">v</button>
+				  </li>
+				  <li class="list-group-item d-flex justify-content-between align-items-center">
+				    Inglés
+				    <button class="btn btn-primary badge badge-primary badge-pill">v</button>
+				  </li>
+				</ul>
+			</div>
+
+		</div>
+
+		<!--footer-->
+		<div id="footer" class="mt-5">
+			<div class="container-fluid text-center">
+				<img src="../img/logo.png" width="200px" class="mb-2">
+				<br>
+				<i class="fab fa-facebook-square fa-2x"></i>
+				<i class="fab fa-instagram fa-2x"></i>
+				<i class="fab fa-twitter-square fa-2x"></i>
+			</div>
+		</div>
+
+	    <!--Scripts de bootstrap-->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	    <!--Main js-->
+		<script type="text/javascript" src="js/js.js"></script>
+	</body>
+</html>
