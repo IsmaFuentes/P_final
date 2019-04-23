@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pelicula</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Bootstrap CSS-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+		<!--Font awesome-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!--Main CSS-->
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<!--Google fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	</head>
+
+	<body id="user_body">
+		<!--Navbar-->
+		<nav class="navbar navbar-expand-md">
+			<span id="nav_logo" class="navbar-brand"></span>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
+				<i class="fa fa-bars" id="menu-ico"></i>
+			</button>
+			<!--izquierda-->
+			<div class="collapse navbar-collapse" id="nav-content">
+				<a href="../series.html" class="custom-link">series</a>
+				<a href="../peliculas.html" class="custom-link">peliculas</a>
+				<a href="../listas.html" class="custom-link">listas</a>
+				<!--Usuario // dropdown-->
+				<div class="dropdown ml-auto">
+					<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img class="rounded-circle ml-auto user-img" src="../img/user.png" alt="user-img">
+				  		<span class="caret"></span>
+					</button>
+				  	<div class="dropdown-menu dropdown-menu-right">
+				    	<a class="dropdown-item" href="#">Perfil</a>
+				    	<a class="dropdown-item" href="#">Añadir contenido</a>
+				    	<div class="dropdown-divider"></div>
+				    	<a class="dropdown-item" href="#">Cerrar sesión</a>
+				  	</div>
+				</div>
+			</div>
+		</nav>
+
+		<!--Cabecera con logo de la pelicula/serie-->
+		<div id="film-header" class="mb-5">
+			<div class="img-container">
+				<img src="../img/deadpool.jpg" class="film-ico">
+			</div>
+		</div>
+
+		<div class="container-fluid">
+		<!--Inicio contenedor-->
+
+			<!--Pelicula--->
+			<div class="row mt-3">
+				<div class="col-4 d-none d-sm-none d-md-none d-lg-block" >
+					<h4>Relacionadas</h4><hr>
+					<!--Tabla de peliculas/series relacionadas-->
+					<table class="table">
+						<tbody class="text-center">
+							<tr>
+								<td>
+									<a href="#"><img src="../img/venom.jpg" class="caratula"></a>
+									<h6 class="mt-2">Venom</h6>
+								</td>
+								<td>
+									<a href="#"><img src="../img/deadpool.jpg" class="caratula"></a>
+									<h6 class="mt-2">Deadpool 2</h6>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#"><img src="../img/camerica.jpg" class="caratula"></a>
+									<h6 class="mt-2">Capitan América</h6>
+								</td>
+								<td>
+									<a href="#"><img src="../img/spiderman.png" class="caratula"></a>
+									<h6 class="mt-2">Spiderman</h6>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--Cuerpo-->
+				<div class="col-lg-8 col-sm-12">
+					<h4>Deadpool 2</h4><hr>
+					<!--Info-->
+					<div>
+						<h5>Información</h5>
+						<!--Valoraciones-->
+						<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+						<span>4 de 1128</span>
+
+						<br>
+						<!--Tipo de pelicula-->
+						<b>Comedia - Acción - Superhéroes</b>
+						<br>
+
+						<!--Duración de la pelicula-->
+						<p>Duración: 112'</p>
+					</div>
+					<!--Sinopsis-->	
+					<div class="">
+						<h5>Sinopsis</h5>
+						<p class="text-justify">
+							Deadpool 24​ es una película de superhéroes estadounidense de 2018, basada en el personaje de Marvel Comics Deadpool y distribuida por 20th Century Fox. Es la duodécima película de la saga de películas de X-Men, y una secuela directa de Deadpool, película de 2016. 
+							<br>La cinta está dirigida por David Leitch y regresan como guionistas Rhet Reese y Paul Wernick, contando con la protagonización principal de Ryan Reynolds, Morena Baccarin, T. J. Miller, Leslie Uggams, Brianna Hildebrand, Stefan Kapičić y Josh Brolin. Zazie Beetz y Jack Kesy interpretan además a dos personajes nuevos.
+						</p>
+
+						<!--Trailer / ventana modal-->
+						<!--
+						<div class="embed-responsive embed-responsive-16by9">
+						  	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+						</div>-->
+						<!---->
+
+						<!--Links-->
+						<div class="mt-5">
+							<!--Despliega los enlaces-->
+							<button class="custom-btn mb-2" data-toggle="collapse" data-target="#enlaces-collapse">
+								Enlaces
+							</button>
+
+							<!--Collapse con la lista de enlaces-->
+							<div class="collapse" id="enlaces-collapse">
+								<ul class="list-group">
+								  <li class="list-group-item d-flex justify-content-between align-items-center">
+								    Español subtitulado
+								    <button class="custom-btn badge badge-pill" data-toggle="collapse" data-target="#collapse1">v</button>
+								  </li>
+								  <!--collapse 1-->
+									  <div class="collapse" id="collapse1">
+										  <div class="card-body">
+										  	<!--tabla links-->
+						                    <table class="table table-hover" id="links">
+						                        <tbody>
+						                            <tr>
+						                                <td>Nombre Servidor</td>
+						                                <td><img src="../img/spanish.jpg" alt="spanish" class="bandera"></td>
+						                                <td><i class="fas fa-video"></i> Rip <i class="fas fa-headphones-alt"></i> Rip</td>
+						                                <td>Nombre</td>
+						                            </tr>
+						                            <tr>
+						                                <td>Nombre Servidor</td>
+						                                <td><img src="../img/spanish.jpg" alt="spanish" class="bandera"></td>
+						                                <td><i class="fas fa-video"></i> Rip <i class="fas fa-headphones-alt"></i> Rip</td>
+						                                <td>Nombre</td>
+						                            </tr>
+						                            <tr>
+						                                <td>Nombre Servidor</td>
+						                                <td><img src="../img/spanish.jpg" alt="spanish" class="bandera"></td>
+						                                <td><i class="fas fa-video"></i> 1080 <i class="fas fa-headphones-alt"></i> Rip</td>
+						                                <td>Nombre</td>
+						                            </tr>
+						                        </tbody>
+						                    </table>
+									      </div>
+									  </div>
+								  <!---->
+								  <li class="list-group-item d-flex justify-content-between align-items-center">
+								    Español Castellano
+								    <button class="custom-btn badge badge-pill" data-toggle="collapse" data-target="#collapse2">v</button>
+								  </li>
+								  <!--collapse 2-->
+									  <div class="collapse" id="collapse2">
+										  <div class="card-body">
+										  	<!--tabla links-->
+						                    <table class="table table-hover" id="links">
+						                        <tbody>
+						                            <tr>
+						                                <td>Nombre Servidor</td>
+						                                <td><img src="../img/spanish.jpg" alt="spanish" class="bandera"></td>
+						                                <td><i class="fas fa-video"></i> Rip <i class="fas fa-headphones-alt"></i> Rip</td>
+						                                <td>Nombre</td>
+						                            </tr>
+						                            <tr>
+						                                <td>Nombre Servidor</td>
+						                                <td><img src="../img/spanish.jpg" alt="spanish" class="bandera"></td>
+						                                <td><i class="fas fa-video"></i> Rip <i class="fas fa-headphones-alt"></i> Rip</td>
+						                                <td>Nombre</td>
+						                            </tr>
+						                            <tr>
+						                                <td>Nombre Servidor</td>
+						                                <td><img src="../img/spanish.jpg" alt="spanish" class="bandera"></td>
+						                                <td><i class="fas fa-video"></i> 1080 <i class="fas fa-headphones-alt"></i> Rip</td>
+						                                <td>Nombre</td>
+						                            </tr>
+						                        </tbody>
+						                    </table>
+									      </div>
+									  </div>
+								  <!---->
+								  <li class="list-group-item d-flex justify-content-between align-items-center">
+								    Inglés
+								    <button class="custom-btn badge badge-pill" data-toggle="collapse" data-target="#collapse3">v</button>
+								  </li>
+								  <!--collapse 3-->
+									  <div class="collapse" id="collapse3">
+										  <div class="card-body">
+										  	<!--tabla links-->
+						                    <table class="table table-hover" id="links">
+						                        <tbody>
+						                            <tr>
+						                                <td>Nombre Servidor</td>
+						                                <td><img src="../img/english.png" alt="english" class="bandera"></td>
+						                                <td><i class="fas fa-video"></i> Rip <i class="fas fa-headphones-alt"></i> Rip</td>
+						                                <td>Nombre</td>
+						                            </tr>
+						                            <tr>
+						                                <td>Nombre Servidor</td>
+						                                <td><img src="../img/english.png" alt="english" class="bandera"></td>
+						                                <td><i class="fas fa-video"></i> Rip <i class="fas fa-headphones-alt"></i> Rip</td>
+						                                <td>Nombre</td>
+						                            </tr>
+						                            <tr>
+						                                <td>Nombre Servidor</td>
+						                                <td><img src="../img/english.png" alt="english" class="bandera"></td>
+						                                <td><i class="fas fa-video"></i> 1080 <i class="fas fa-headphones-alt"></i> Rip</td>
+						                                <td>Nombre</td>
+						                            </tr>
+						                        </tbody>
+						                    </table>
+									      </div>
+									  </div>
+								  <!---->
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--Cajón de comentarios-->
+					<div class="mt-5">
+						<h5>Comentarios</h5><hr>
+
+					</div>
+				</div>
+			</div>
+		<!--Final contenedor-->
+		</div>
+
+		<!--footer-->
+		<div id="footer" class="mt-5">
+			<div class="container-fluid text-center">
+				<img src="../img/logo.png" width="200px" class="mb-2">
+				<br>
+				<i class="fab fa-facebook-square fa-2x"></i>
+				<i class="fab fa-instagram fa-2x"></i>
+				<i class="fab fa-twitter-square fa-2x"></i>
+			</div>
+		</div>
+
+	    <!--Scripts de bootstrap-->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	    <!--Main js-->
+		<script type="text/javascript" src="../js/js.js"></script>
+	</body>
+</html>

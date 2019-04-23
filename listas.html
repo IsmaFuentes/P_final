@@ -26,8 +26,19 @@
 				<a href="series.html" class="custom-link">series</a>
 				<a href="peliculas.html" class="custom-link">peliculas</a>
 				<a href="listas.html" class="custom-link current-active">listas</a>
-				<!--Usuario-->
-				<img class="rounded-circle ml-auto user-img" src="img/user.png" alt="user-img">
+				<!--Usuario // dropdown-->
+				<div class="dropdown ml-auto">
+					<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img class="rounded-circle ml-auto user-img" src="img/user.png" alt="user-img">
+				  		<span class="caret"></span>
+					</button>
+				  	<div class="dropdown-menu dropdown-menu-right">
+				    	<a class="dropdown-item" href="#">Perfil</a>
+				    	<a class="dropdown-item" href="#">Añadir contenido</a>
+				    	<div class="dropdown-divider"></div>
+				    	<a class="dropdown-item" href="#">Cerrar sesión</a>
+				  	</div>
+				</div>
 			</div>
 		</nav>
 
@@ -46,7 +57,7 @@
                         <a href="#" class="custom-link">Todas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="custom-link">Favs</a>
+                        <a href="#" class="custom-link"><i class="fa fa-thumbs-up"></i></a>
                     </li>
                     <li class="nav-item" id="hidden">
                         <button type="button" class="btn custom-link" data-toggle="modal" data-target="#modalfiltros">

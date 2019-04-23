@@ -26,8 +26,19 @@
 				<a href="series.html" class="custom-link">series</a>
 				<a href="peliculas.html" class="custom-link current-active">peliculas</a>
 				<a href="listas.html" class="custom-link">listas</a>
-				<!--Usuario-->
-				<img class="rounded-circle ml-auto user-img" src="img/user.png" alt="user-img" id="user-img">
+				<!--Usuario // dropdown-->
+				<div class="dropdown ml-auto">
+					<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img class="rounded-circle ml-auto user-img" src="img/user.png" alt="user-img">
+				  		<span class="caret"></span>
+					</button>
+				  	<div class="dropdown-menu dropdown-menu-right">
+				    	<a class="dropdown-item" href="#">Perfil</a>
+				    	<a class="dropdown-item" href="#">Añadir contenido</a>
+				    	<div class="dropdown-divider"></div>
+				    	<a class="dropdown-item" href="#">Cerrar sesión</a>
+				  	</div>
+				</div>
 			</div>
 		</nav>
 
@@ -46,10 +57,10 @@
                         <a href="#" class="custom-link">Todas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="custom-link">Favs</a>
+                        <a href="#" class="custom-link"><i class="fa fa-thumbs-up"></i></a>
                     </li>
                     <li class="nav-item" id="hidden">
-                        <button type="button" class="btn custom-link" data-toggle="modal" data-target="#modalfiltros">
+                        <button type="button" class="custom-link" data-toggle="modal" data-target="#modalfiltros">
                         	<i class="fa fa-filter"></i>
                     	</button>
                     </li>
@@ -112,78 +123,80 @@
 
 						<!--Fila de peliculas 1-->
 						<div class="row mt-2">
-							<div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
+
+							<div class="col-sm-6 col-lg-3 mb-2 ">
+                                <a href="items/pelicula.html" class="text-decoration-none">
+                                    <img src="img/venom.jpg" class="custom-img" alt="img película">
+                                </a>
+                                <div class="film-footer">
+                                	<p class="pt-1 film-text">Venom</p>
+                            	</div>
+							</div>
+
+							<div class="col-sm-6 col-lg-3 mb-2">
+                                <a href="items/pelicula.html" class="text-decoration-none">
+                                    <img src="img/deadpool.jpg" class="custom-img" alt="img película">
                                 </a>
                                 <div class="film-footer">
                                 	<p class="pt-1 film-text">Deadpool 2</p>
                             	</div>
 							</div>
 
-							<div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
+                            <div class="col-sm-6 col-lg-3 mb-2">
+                                <a href="items/pelicula.html" class="text-decoration-none">
+                                    <img src="img/camerica.jpg" class="custom-img" alt="img película">
                                 </a>
                                 <div class="film-footer">
-                                	<p class="pt-1 film-text">Deadpool 2</p>
-                            	</div>
-							</div>
-
-                            <div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
-                                </a>
-                                <div class="film-footer">
-                                	<p class="pt-1 film-text">Deadpool 2</p>
+                                	<p class="pt-1 film-text">Capitán America</p>
                             	</div>
                             </div>
 
-                            <div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
+                            <div class="col-sm-6 col-lg-3 mb-2">
+                                <a href="items/pelicula.html" class="text-decoration-none">
+                                    <img src="img/spiderman.png" class="custom-img" alt="img película">
                                 </a>
                                 <div class="film-footer">
-                                	<p class="pt-1 film-text">Deadpool 2</p>
+                                	<p class="pt-1 film-text">Spiderman</p>
                             	</div>
                             </div>
 						</div>
 
 						<!--fila de peliculas 2-->
 						<div class="row mt-2">
-							<div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
+
+							<div class="col-sm-6 col-lg-3 mb-2 ">
+                                <a href="items/pelicula.html" class="text-decoration-none">
+                                    <img src="img/venom.jpg" class="custom-img" alt="img película">
+                                </a>
+                                <div class="film-footer">
+                                	<p class="pt-1 film-text">Venom</p>
+                            	</div>
+							</div>
+
+							<div class="col-sm-6 col-lg-3 mb-2">
+                                <a href="items/pelicula.html" class="text-decoration-none">
+                                    <img src="img/deadpool.jpg" class="custom-img" alt="img película">
                                 </a>
                                 <div class="film-footer">
                                 	<p class="pt-1 film-text">Deadpool 2</p>
                             	</div>
 							</div>
 
-							<div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
+                            <div class="col-sm-6 col-lg-3 mb-2">
+                                <a href="items/pelicula.html" class="text-decoration-none">
+                                    <img src="img/camerica.jpg" class="custom-img" alt="img película">
                                 </a>
                                 <div class="film-footer">
-                                	<p class="pt-1 film-text">Deadpool 2</p>
-                            	</div>
-							</div>
-
-                            <div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
-                                </a>
-                                <div class="film-footer">
-                                	<p class="pt-1 film-text">Deadpool 2</p>
+                                	<p class="pt-1 film-text">Capitán America</p>
                             	</div>
                             </div>
 
-                            <div class="col-sm-6 col-lg-3">
-                                <a href="#" class="text-decoration-none">
-                                    <img src="img/deadpool.jpg" class="card-img img-fluid" alt="img película">
+                            <div class="col-sm-6 col-lg-3 mb-2">
+                                <a href="items/pelicula.html" class="text-decoration-none">
+                                    <img src="img/spiderman.png" class="custom-img" alt="img película">
                                 </a>
                                 <div class="film-footer">
-                                	<p class="pt-1 film-text">Deadpool 2</p>
+                                	<p class="pt-1 film-text">Spiderman</p>
                             	</div>
                             </div>
 						</div>

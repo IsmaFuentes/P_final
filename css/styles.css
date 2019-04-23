@@ -23,6 +23,10 @@
 	background-color: #F7BC7C;
 }
 
+.custom-btn:focus{
+	outline: none;
+}
+
 .input-group-text{
 	background-color: #F5A754;
 	border: #F7BC7C;
@@ -43,7 +47,6 @@
 .user-img {
 	width: 30px;
 }
-
 
 #user-img:hover .dropdown-content {display: block;}
 
@@ -89,14 +92,19 @@
 
 .custom-link{
 	color: white;
+	border: none;
+	background: transparent;
 	padding: 3px;
 	padding-left: 10px;
-	display: flex;
 }
 
 .custom-link:hover{
 	color: white;
 	text-decoration: none;
+}
+
+.custom-link:focus{
+	outline: none;
 }
 
 .active-link{
@@ -169,6 +177,23 @@
 	color: white;
 }
 
+/*Dropdown usuario*/
+.dropdown-toggle {
+	border: none;
+	background-color: transparent;
+	color: white;
+}
+
+.dropdown-toggle:focus{
+	outline: none;
+}
+
+/*Imágenes*/
+
+.custom-img{
+	width: 100%;
+	height: 80%;
+}
 
 @media only screen and (max-width: 990px) {
 	#filtros{
@@ -200,15 +225,13 @@
 		width: 100%;
 		height: auto;
 	}
-
+	.navbar-collapse{
+		text-align: right;
+	}
+	.custom-link{
+		display: block;
+	}
 }
-
-/*******************************************************/
-
-
-/****************PÁGINA FAVORITOS*****************************/
-
-
 
 
 /*******************************************************/
