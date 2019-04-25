@@ -107,6 +107,12 @@
 							Deadpool 24​ es una película de superhéroes estadounidense de 2018, basada en el personaje de Marvel Comics Deadpool y distribuida por 20th Century Fox. Es la duodécima película de la saga de películas de X-Men, y una secuela directa de Deadpool, película de 2016. 
 							<br>La cinta está dirigida por David Leitch y regresan como guionistas Rhet Reese y Paul Wernick, contando con la protagonización principal de Ryan Reynolds, Morena Baccarin, T. J. Miller, Leslie Uggams, Brianna Hildebrand, Stefan Kapičić y Josh Brolin. Zazie Beetz y Jack Kesy interpretan además a dos personajes nuevos.
 						</p>
+						
+						<!--Añadir a favoritos-->
+						<div class="custom-control custom-checkbox">
+	  						<input type="checkbox" class="custom-control-input" id="customCheck1">
+	  						<label class="custom-control-label" for="customCheck1">Añadir a favoritos</label>
+						</div>
 
 						<!--Trailer / ventana modal-->
 						<!--
@@ -231,11 +237,11 @@
 
 					<h5 class="mt-5">Comentarios</h5><hr>
 					<!--Cajón de comentarios-->
-					<div class="mt-1">
+					<div>
 						<!--Comentarios-->
-						<div id="comment-container" class="container-fluid">
+						<div id="comment-container" class="container-fluid mt-1">
 							<div class="row comment-body">
-								<div class="col-2 my-2">
+								<div class="my-2 col-usuario">
 									<div class=" text-center">
 										<img class="rounded-circle user-img" src="../img/user.png" alt="user-img">
 									</div>
@@ -243,18 +249,19 @@
 										<span class="posted-data">Usuario</span>
 									</div>
 								</div>
-								<div class="col-10 my-2 text-left">
+								<div class="my-2 text-left col-comentario">
 									<div class="comment" readonly>
-										<p class="comment-text text-justify">
+										<p class="comment-text text-justify px-2">
 											Ever man are put down his very. And marry may table him avoid. Hard sell it were into it upon. He forbade affixed parties of assured to me windows
 										</p>
 										<div class="text-right">
-											<span class="posted-data">25/04/2019 - 20:03</span>
+											<span class="posted-data pr-2">25/04/2019 - 20:03</span>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<!---->
 
 						<!--Añadir comentario-->
 						<div class="mt-2">
@@ -262,8 +269,8 @@
 								<div class="col-10">
 									<div class="panel panel-info">
 										<div class="panel-body">
-											<!--Formulario-->
 											<textarea class="form-control" rows="3" placeholder="Escribe aquí"></textarea>
+											<!--FORM-->
 											<form class="form-inline">
 												<button class="custom-btn ml-auto mt-1" type="button">Publicar</button>
 											</form>
@@ -272,6 +279,7 @@
 								</div>
 							</div>
 						</div>
+						<!---->
 
 					</div>
 					<!--Final cajón de comentarios-->

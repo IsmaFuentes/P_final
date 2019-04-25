@@ -273,10 +273,55 @@
 	width: 70%;
 }
 
+.table td, .table th {
+    border: none;
+}
 .bandera{
 	width: 50px;
 }
 
 #links{
 	width: 100%;
+}
+
+/*Cajón de comentarios*/
+.posted-data{
+	font-size: 10px;
+}
+
+.comment-body{
+	border: 1px solid #B2B0B0;
+	border-radius: 3px;
+	background-color: #efefe6;
+}
+
+.comment{
+	border-radius: 2px;
+	height: 100%;
+	width: 100%;
+}
+
+.comment-text{
+	font-size: 12px;
+}
+
+.col-usuario{
+	width: 15%;
+}
+
+.col-comentario {
+	width: 85%;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+	background-color: #F5A754;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after{
+	background-color: #F5A754;
+}
+
+.custom-checkbox .custom-control-input:focus~.custom-control-label::before{
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(255, 0, 247, 0.25); 
+    border: none;
 }
