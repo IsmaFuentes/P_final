@@ -54,7 +54,15 @@
 
 			<!--Pelicula--->
 			<div class="row mt-3">
-				<div class="col-4 d-none d-sm-none d-md-none d-lg-block" >
+				<div class="col-4 d-none d-sm-none d-md-none d-lg-block">
+					<h4>Tráiler</h4><hr>
+					<!--Trailer / ventana modal-->
+					<div class="trailer">
+						<div class="embed-responsive embed-responsive-16by9 mb-4">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/20bpjtCbCz0" allowfullscreen></iframe>
+						</div>
+					</div>
+					<!---->
 					<h4>Relacionadas</h4><hr>
 					<!--Tabla de peliculas/series relacionadas-->
 					<table class="table">
@@ -89,14 +97,16 @@
 					<div>
 						<h5>Información</h5>
 						<!--Valoraciones-->
-						<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
 						<span>4 de 1128</span>
-
 						<br>
 						<!--Tipo de pelicula-->
 						<b>Comedia - Acción - Superhéroes</b>
 						<br>
-
 						<!--Duración de la pelicula-->
 						<p>Duración: 112'</p>
 					</div>
@@ -112,27 +122,19 @@
 						<div class="custom-control custom-checkbox">
 	  						<input type="checkbox" class="custom-control-input" id="customCheck1">
 	  						<label class="custom-control-label" for="customCheck1">Añadir a favoritos</label>
-						</div>
+						</div><hr>
 
-						<!--Trailer / ventana modal-->
-						<!--
-						<div class="embed-responsive embed-responsive-16by9">
-						  	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-						</div>-->
-						<!---->
-
-						<!--Links-->
+						<!--Enlaces-->
 						<div class="mt-5">
-							<!--Despliega los enlaces-->
 							<button class="custom-btn mb-2" data-toggle="collapse" data-target="#enlaces-collapse">
 								Enlaces
 							</button>
 
-							<!--Collapse con la lista de enlaces-->
+							<!--Lista de enlaces-->
 							<div class="collapse" id="enlaces-collapse">
 								<ul class="list-group">
 								  <li class="list-group-item d-flex justify-content-between align-items-center">
-								    Español subtitulado
+								    VOSE
 								    <button class="custom-btn badge badge-pill" data-toggle="collapse" data-target="#collapse1">v</button>
 								  </li>
 								  <!--collapse 1-->
@@ -256,6 +258,8 @@
 										</p>
 										<div class="text-right">
 											<span class="posted-data pr-2">25/04/2019 - 20:03</span>
+											<!--Botón para eliminar comentarios (Admin/moderador)-->
+											<button class="btn badge btn-danger mr-2"><i class="fa fa-trash-alt"></i></button>
 										</div>
 									</div>
 								</div>
@@ -269,6 +273,7 @@
 								<div class="col-10">
 									<div class="panel panel-info">
 										<div class="panel-body">
+											<!--Textarea-->
 											<textarea class="form-control" rows="3" placeholder="Escribe aquí"></textarea>
 											<!--FORM-->
 											<form class="form-inline">

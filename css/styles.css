@@ -313,6 +313,10 @@
 	width: 85%;
 }
 
+.custom-control-label{
+	cursor: pointer;
+}
+
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
 	background-color: #F5A754;
 }
@@ -322,6 +326,10 @@
 }
 
 .custom-checkbox .custom-control-input:focus~.custom-control-label::before{
-    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(255, 0, 247, 0.25); 
-    border: none;
+    box-shadow: none;
+}
+
+/*Tráiler*/
+.trailer{
+	width: 315px;
 }
