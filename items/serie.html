@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Pelicula</title>
+		<title>Serie</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!--Bootstrap CSS-->
@@ -46,7 +46,7 @@
 		<!--Cabecera con logo de la pelicula/serie-->
 		<div id="film-header" class="mb-5">
 			<div class="img-container">
-				<img src="../img/deadpool.jpg" class="film-ico">
+				<img src="../img/got.jpg" class="film-ico">
 				<!--Despliega el tráiler en una ventana modal-->
 				<button class="view-trailer-btn" data-toggle="modal" data-target="#trailer-modal">Ver tráiler</button>
 			</div>
@@ -57,7 +57,7 @@
   			<div class="modal-dialog" role="document">
     			<div class="modal-content">
       				<div class="modal-header">
-        				<h5 class="modal-title" id="TrailerModalLabel">Deadpool 2 - Tráiler</h5>
+        				<h5 class="modal-title" id="TrailerModalLabel">Juego de tronos - Tráiler</h5>
         				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           					<span aria-hidden="true">&times;</span>
         				</button>
@@ -65,7 +65,7 @@
       				<div class="modal-body">
 						<div class="trailer">
 							<div class="embed-responsive embed-responsive-16by9 mb-4">
-								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/20bpjtCbCz0" allowfullscreen></iframe>
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/g1IICkElV0M" allowfullscreen></iframe>
 							</div>
 						</div>
       				</div>
@@ -88,22 +88,22 @@
 						<tbody class="text-center">
 							<tr>
 								<td>
-									<a href="#"><img src="../img/venom.jpg" class="caratula"></a>
-									<h6 class="mt-2">Venom</h6>
+									<a href="#"><img src="../img/got.jpg" class="caratula"></a>
+									<h6 class="mt-2">Juego de tronos</h6>
 								</td>
 								<td>
-									<a href="#"><img src="../img/deadpool.jpg" class="caratula"></a>
-									<h6 class="mt-2">Deadpool 2</h6>
+									<a href="#"><img src="../img/twd.jpg" class="caratula"></a>
+									<h6 class="mt-2">The walking dead</h6>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<a href="#"><img src="../img/camerica.jpg" class="caratula"></a>
-									<h6 class="mt-2">Capitan América</h6>
+									<a href="#"><img src="../img/vikings.jpg" class="caratula"></a>
+									<h6 class="mt-2">Vikings</h6>
 								</td>
 								<td>
-									<a href="#"><img src="../img/spiderman.png" class="caratula"></a>
-									<h6 class="mt-2">Spiderman</h6>
+									<a href="#"><img src="../img/strain.jpg" class="caratula"></a>
+									<h6 class="mt-2">The strain</h6>
 								</td>
 							</tr>
 						</tbody>
@@ -111,7 +111,7 @@
 				</div>
 				<!--Cuerpo-->
 				<div class="col-lg-8 col-sm-12">
-					<h4>Deadpool 2</h4><hr>
+					<h4>Juego de tronos</h4><hr>
 					<!--Info-->
 					<div>
 						<h5>Información</h5>
@@ -124,17 +124,16 @@
 						<span>4 de 1128</span>
 						<br>
 						<!--Tipo de pelicula-->
-						<b>Comedia - Acción - Superhéroes</b>
+						<b>Edad media - Mágia - Fantasía</b>
 						<br>
 						<!--Duración de la pelicula-->
-						<p>Duración: 112'</p>
+						<p>Temporadas: 8</p>
 					</div>
 					<!--Sinopsis-->	
 					<div class="">
 						<h5>Sinopsis</h5>
 						<p class="text-justify">
-							Deadpool 24​ es una película de superhéroes estadounidense de 2018, basada en el personaje de Marvel Comics Deadpool y distribuida por 20th Century Fox. Es la duodécima película de la saga de películas de X-Men, y una secuela directa de Deadpool, película de 2016. 
-							<br>La cinta está dirigida por David Leitch y regresan como guionistas Rhet Reese y Paul Wernick, contando con la protagonización principal de Ryan Reynolds, Morena Baccarin, T. J. Miller, Leslie Uggams, Brianna Hildebrand, Stefan Kapičić y Josh Brolin. Zazie Beetz y Jack Kesy interpretan además a dos personajes nuevos.
+ 							Es una serie de televisión de drama y fantasía medieval creada por David Benioff y D. B. Weiss y producida por la cadena HBO. Su argumento está inspirado en la serie de novelas Canción de hielo y fuego, escrita por el estadounidense George R. R. Martin, y relata las vivencias de un grupo de personajes de distintas casas nobiliarias en el continente ficticio Poniente para tener el control del Trono de Hierro y gobernar los siete reinos que conforman al territorio.
 						</p>
 						
 						<!--Añadir a favoritos-->
@@ -145,15 +144,15 @@
 
 						<!--Enlaces-->
 						<div class="mt-5">
-							<button class="custom-btn mb-2" data-toggle="collapse" data-target="#enlaces-collapse">
-								Enlaces
+							<button class="custom-btn mb-2" data-toggle="collapse" data-target="#temporadas-collapse">
+								Temporadas disponibles
 							</button>
 
 							<!--Lista de enlaces-->
-							<div class="collapse" id="enlaces-collapse">
+							<div class="collapse" id="temporadas-collapse">
 								<ul class="list-group">
 								  <li class="list-group-item d-flex justify-content-between align-items-center">
-								    VOSE
+								    Temporada 1
 								    <button class="custom-btn badge badge-pill" data-toggle="collapse" data-target="#collapse1">v</button>
 								  </li>
 								  <!--collapse 1-->
@@ -163,22 +162,19 @@
 						                    <table class="table table-hover" id="links">
 						                        <tbody>
 						                            <tr>
-						                                <td>Nombre Servidor</td>
-						                                <td><img src="../img/spanish.jpg" alt="spanish" class="bandera"></td>
-						                                <td><i class="fas fa-video"></i> Rip <i class="fas fa-headphones-alt"></i> Rip</td>
-						                                <td>Nombre</td>
+						                                <td>Capítulo 1</td>
+						                                <td>Título del capítulo</td>
+						                                <td><a href="capitulo.html">ver ahora</a></td>
 						                            </tr>
 						                            <tr>
-						                                <td>Nombre Servidor</td>
-						                                <td><img src="../img/spanish.jpg" alt="spanish" class="bandera"></td>
-						                                <td><i class="fas fa-video"></i> Rip <i class="fas fa-headphones-alt"></i> Rip</td>
-						                                <td>Nombre</td>
+						                                <td>Capítulo 1</td>
+						                                <td>Título del capítulo</td>
+						                                <td><a href="capitulo.html">ver ahora</a></td>
 						                            </tr>
 						                            <tr>
-						                                <td>Nombre Servidor</td>
-						                                <td><img src="../img/spanish.jpg" alt="spanish" class="bandera"></td>
-						                                <td><i class="fas fa-video"></i> 1080 <i class="fas fa-headphones-alt"></i> Rip</td>
-						                                <td>Nombre</td>
+						                                <td>Capítulo 1</td>
+						                                <td>Título del capítulo</td>
+						                                <td><a href="capitulo.html">ver ahora</a></td>
 						                            </tr>
 						                        </tbody>
 						                    </table>
@@ -186,7 +182,7 @@
 									  </div>
 								  <!---->
 								  <li class="list-group-item d-flex justify-content-between align-items-center">
-								    Español Castellano
+								    Temporada 2
 								    <button class="custom-btn badge badge-pill" data-toggle="collapse" data-target="#collapse2">v</button>
 								  </li>
 								  <!--collapse 2-->
@@ -196,22 +192,19 @@
 						                    <table class="table table-hover" id="links">
 						                        <tbody>
 						                            <tr>
-						                                <td>Nombre Servidor</td>
-						                                <td><img src="../img/spanish.jpg" alt="spanish" class="bandera"></td>
-						                                <td><i class="fas fa-video"></i> Rip <i class="fas fa-headphones-alt"></i> Rip</td>
-						                                <td>Nombre</td>
+						                                <td>Capítulo 1</td>
+						                                <td>Título del capítulo</td>
+						                                <td><a href="capitulo.html">ver ahora</a></td>
 						                            </tr>
 						                            <tr>
-						                                <td>Nombre Servidor</td>
-						                                <td><img src="../img/spanish.jpg" alt="spanish" class="bandera"></td>
-						                                <td><i class="fas fa-video"></i> Rip <i class="fas fa-headphones-alt"></i> Rip</td>
-						                                <td>Nombre</td>
+						                                <td>Capítulo 1</td>
+						                                <td>Título del capítulo</td>
+						                                <td><a href="capitulo.html">ver ahora</a></td>
 						                            </tr>
 						                            <tr>
-						                                <td>Nombre Servidor</td>
-						                                <td><img src="../img/spanish.jpg" alt="spanish" class="bandera"></td>
-						                                <td><i class="fas fa-video"></i> 1080 <i class="fas fa-headphones-alt"></i> Rip</td>
-						                                <td>Nombre</td>
+						                                <td>Capítulo 1</td>
+						                                <td>Título del capítulo</td>
+						                                <td><a href="capitulo.html">ver ahora</a></td>
 						                            </tr>
 						                        </tbody>
 						                    </table>
@@ -219,7 +212,7 @@
 									  </div>
 								  <!---->
 								  <li class="list-group-item d-flex justify-content-between align-items-center">
-								    Inglés
+								    Temporada 3
 								    <button class="custom-btn badge badge-pill" data-toggle="collapse" data-target="#collapse3">v</button>
 								  </li>
 								  <!--collapse 3-->
@@ -229,22 +222,19 @@
 						                    <table class="table table-hover" id="links">
 						                        <tbody>
 						                            <tr>
-						                                <td>Nombre Servidor</td>
-						                                <td><img src="../img/english.png" alt="english" class="bandera"></td>
-						                                <td><i class="fas fa-video"></i> Rip <i class="fas fa-headphones-alt"></i> Rip</td>
-						                                <td>Nombre</td>
+						                                <td>Capítulo 1</td>
+						                                <td>Título del capítulo</td>
+						                                <td><a href="capitulo.html">ver ahora</a></td>
 						                            </tr>
 						                            <tr>
-						                                <td>Nombre Servidor</td>
-						                                <td><img src="../img/english.png" alt="english" class="bandera"></td>
-						                                <td><i class="fas fa-video"></i> Rip <i class="fas fa-headphones-alt"></i> Rip</td>
-						                                <td>Nombre</td>
+						                                <td>Capítulo 1</td>
+						                                <td>Título del capítulo</td>
+						                                <td><a href="capitulo.html">ver ahora</a></td>
 						                            </tr>
 						                            <tr>
-						                                <td>Nombre Servidor</td>
-						                                <td><img src="../img/english.png" alt="english" class="bandera"></td>
-						                                <td><i class="fas fa-video"></i> 1080 <i class="fas fa-headphones-alt"></i> Rip</td>
-						                                <td>Nombre</td>
+						                                <td>Capítulo 1</td>
+						                                <td>Título del capítulo</td>
+						                                <td><a href="capitulo.html">ver ahora</a></td>
 						                            </tr>
 						                        </tbody>
 						                    </table>
