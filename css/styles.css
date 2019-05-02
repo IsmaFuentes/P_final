@@ -347,3 +347,35 @@
 	outline: none;
 }
 
+/*******************************************************/
+
+
+/****************CRUD USUARIOS*****************************/
+.tabla{
+	width: 100%;
+}
+
+.table-title{
+    background: #787676;
+    color: #fff;
+    padding: 16px 30px;
+    border-radius: 3px 3px 0 0;
+}
+
+.custom-danger{
+	border: none;
+	padding: 7px;
+	color: white;
+	background-color: #E8462C;
+	border-radius: 5px;
+	font-size: 15px;
+	outline: none;
+}
+
+.custom-danger:hover{
+	background-color: #D67D63;
+}
+
+.custom-danger:focus{
+	outline: none;
+}

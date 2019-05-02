@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Usuarios</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Bootstrap CSS-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+		<!--Font awesome-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!--Main CSS-->
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<!--Google fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	</head>
+
+	<body id="user_body">
+		<!--Navbar-->
+		<nav class="navbar navbar-expand-md">
+			<span id="nav_logo" class="navbar-brand"></span>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
+				<i class="fa fa-bars" id="menu-ico"></i>
+			</button>
+			<!--izquierda-->
+			<div class="collapse navbar-collapse" id="nav-content">
+				<span class="custom-link">usuarios</span>
+				<!--Usuario // dropdown-->
+				<div class="dropdown ml-auto">
+					<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img class="rounded-circle ml-auto user-img" src="../img/user.png" alt="user-img">
+				  		<span class="caret"></span>
+					</button>
+				  	<div class="dropdown-menu dropdown-menu-right">
+				    	<a class="dropdown-item" href="#">Perfil</a>
+				    	<a class="dropdown-item" href="#">Administrar usuarios</a>
+				    	<a class="dropdown-item" href="#">Añadir contenido</a>
+				    	<div class="dropdown-divider"></div>
+				    	<a class="dropdown-item" href="#">Cerrar sesión</a>
+				  	</div>
+				</div>
+			</div>
+		</nav>
+
+		<!--Contenedor principal-->
+		<div class="container-fluid mt-4">
+
+
+						<!--Paginación-->
+						<nav aria-label="Paginación" class="mt-4">
+						  <ul class="pagination">
+						    <li class="page-item">
+						      <a class="page-link" href="#" aria-label="Previous">
+						        <span aria-hidden="true">&laquo;</span>
+						        <span class="sr-only">atrás</span>
+						      </a>
+						    </li>
+						    <li class="page-item"><a class="page-link" href="#">1</a></li>
+						    <li class="page-item"><a class="page-link" href="#">2</a></li>
+						    <li class="page-item"><a class="page-link" href="#">3</a></li>
+						    <li class="page-item">
+						      <a class="page-link" href="#" aria-label="Next">
+						        <span aria-hidden="true">&raquo;</span>
+						        <span class="sr-only">siguiente</span>
+						      </a>
+						    </li>
+						  </ul>
+						</nav>
+
+		<!--Final del contenedor-->
+		</div>
+
+		<!--footer-->
+		<div id="footer" class="mt-5">
+			<div class="container-fluid text-center">
+				<img src="../img/logo.png" width="200px" class="mb-2">
+				<br>
+				<i class="fab fa-facebook-square fa-2x"></i>
+				<i class="fab fa-instagram fa-2x"></i>
+				<i class="fab fa-twitter-square fa-2x"></i>
+			</div>
+		</div>
+
+	    <!--Scripts de bootstrap-->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	    <!--Main js-->
+		<script type="text/javascript" src="js/js.js"></script>
+	</body>
+</html>
