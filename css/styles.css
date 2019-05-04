@@ -379,3 +379,9 @@
 .custom-danger:focus{
 	outline: none;
 }
+
+.btn-secondary {
+	width: 55px;
+	height: 25px;
+	font-size: 10px;
+}
