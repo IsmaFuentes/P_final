@@ -12,6 +12,8 @@
 		<link rel="stylesheet" type="text/css" href="../css/styles.css">
 		<!--Google fonts-->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<!--Pretty checkboxes-->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
 	</head>
 
 	<body id="user_body">
@@ -33,9 +35,9 @@
 				  		<span class="caret"></span>
 					</button>
 				  	<div class="dropdown-menu dropdown-menu-right">
-				    	<a class="dropdown-item" href="#">Perfil</a>
-				    	<a class="dropdown-item" href="#">Administrar usuarios</a>
-				    	<a class="dropdown-item" href="#">Añadir contenido</a>
+				    	<a class="dropdown-item" href="../admin/perfil.html">Perfil</a>
+				    	<a class="dropdown-item" href="../admin/usuarios.html">Administrar usuarios</a>
+				    	<a class="dropdown-item" href="../admin/contenido.html">Añadir contenido</a>
 				    	<div class="dropdown-divider"></div>
 				    	<a class="dropdown-item" href="#">Cerrar sesión</a>
 				  	</div>
@@ -137,10 +139,14 @@
 						</p>
 						
 						<!--Añadir a favoritos-->
-						<div class="custom-control custom-checkbox">
-	  						<input type="checkbox" class="custom-control-input" id="customCheck1">
-	  						<label class="custom-control-label" for="customCheck1">Añadir a favoritos</label>
-						</div><hr>
+						<!--Custom Checkbox-->
+						<div class="pretty p-default p-switch p-fill">
+							<input type="checkbox" id="fav">
+							<div class="state">
+								<label>Añadir a favoritos</label>
+							</div>
+						</div>
+						<hr>
 
 						<!--Enlaces-->
 						<div class="mt-5">
