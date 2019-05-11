@@ -373,10 +373,32 @@
 /*******************************************************/
 
 
-/****************ALERTS*****************************/
-#fav-pelicula {
+/****************ALERTS // OTROS*****************************/
+#fav-alert {
 	display:none;
 	z-index: 10;
 	position: absolute;
+	width: 200px;
+}
 
+#loading-screen {
+	display: none;
+	position: fixed;
+	z-index: 2000;
+	top: 0;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100vw;
+	height: 100vh;
+}
+
+#spinner {
+	margin: auto;
+	margin-top: 45vh;
+	width: 200px;
+	background-color: transparent;
+}
+
+#progress-bar {
+	width: 1%;
+	transition: width 2s;
 }
