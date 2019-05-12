@@ -402,3 +402,39 @@
 	width: 1%;
 	transition: width 2s;
 }
+
+#alert-changes-success{
+	display: none;
+	z-index: 10;
+	position: absolute;
+	right: 15px;
+	text-align: center;
+}
+
+#alert-changes-error{
+	display: none;
+	z-index: 10;
+	position: absolute;
+	right: 15px;
+	text-align: center;	
+}
+/*******************************************************/
+
+
+/**************** PERFIL *****************************/
+.profile-img {
+	width: 150px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#upload-btn{
+	cursor: pointer;
+}
+
+#perfil {
+	width: 70vw;
+	margin: auto;
+}
