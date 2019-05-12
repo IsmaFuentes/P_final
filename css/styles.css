@@ -418,12 +418,47 @@
 	right: 15px;
 	text-align: center;	
 }
+
+#alert-psw-success{
+	width: 400px;
+	margin: auto;
+	display: none;
+}
+
+#alert-psw-error{
+	width: 400px;
+	margin: auto;
+	display: none;
+}
+
+#reg-error{
+	display: none;
+}
+
+#reg-success{
+	display: none;
+}
+
+#reg-error-pwd{
+	display: none;
+}
+
+#error-no-user{
+	display: none;
+}
+
+#error-banned{
+	display: none;
+}
+
 /*******************************************************/
 
 
 /**************** PERFIL *****************************/
 .profile-img {
 	width: 150px;
+	height: 190px;
+	object-fit: cover;
 }
 
 input[type="file"] {

@@ -60,46 +60,47 @@
 	            </div>
 	        </div>
 		    <!--ALERTS-->
-		    <div class="alert alert-warning" id="alert-changes-success">
+		    <div class="alert alert-warning mt-2" id="alert-changes-success">
 		        Cambios realizados con éxito.
 		    </div>
 
-		    <div class="alert alert-danger" id="alert-changes-error">
-		        Ha ocurrido un problema validando los datos
+		    <div class="alert alert-danger mt-2" id="alert-changes-error">
+		        Ha ocurrido un problema validando los datos.
 		    </div>
 
 	        <!--DATOS DEL USUARIO-->
 	        <div id="perfil">
 	        	<!--Foto usuario-->
 	        	<div class="text-center pt-5">
-		        	<img src="../img/user.png" class="rounded-circle profile-img">
+		        	<img src="../img/mrbean2.jpg" class="rounded-circle profile-img">
 		        	<br>
 		        	<!--Cambiar imágen de perfil-->
-					<label for="upload" class="custom-btn" id="upload-btn">
+					<label for="upload" class="custom-btn mt-2" id="upload-btn">
 						<i class="fa fa-cloud-upload"></i> Sube otra foto
 					</label>
 		        	<input type="file" name="profile" id="upload">
 	        	</div>
 	        	<!--Datos del usuario-->
 	        	<div class="container" id="profile-data"><hr>
-	        		<!--Nombre de usuario-->
-	        		<span class="badge badge-light">Nickname</span>
-	        		<input type="text" name="" value="username" class="form-control" id="nickname" disabled><br>
+	        		<form>
+		        		<!--Nombre de usuario-->
+		        		<span class="badge badge-light">Nickname</span>
+		        		<input type="text" name="" value="username" class="form-control" id="nickname" disabled><br>
 
-	        		<!--Email-->
-	        		<span class="badge badge-light">E-Mail</span>
-	        		<input type="text" name="" value="username@gmail.com" id="email" class="form-control" disabled><br>
+		        		<!--Email-->
+		        		<span class="badge badge-light">E-Mail</span>
+		        		<input type="text" name="" value="username@gmail.com" id="email" class="form-control" disabled><br>
 
-	        		<!--Role-->
-	        		<span class="badge badge-light">Rol</span>
-	        		<input type="text" name="" value="Admin" id="role" class="form-control" disabled><br>
+		        		<!--Role-->
+		        		<span class="badge badge-light">Rol</span>
+		        		<input type="text" name="" value="Admin" id="role" class="form-control" disabled><br>
 
-	        		<!--Descripción-->
-	        		<span class="badge badge-light">Sobre mí</span>
-	        		<textarea class="form-control" rows="3" id="aboutme" class="form-control" disabled>Breve descripción</textarea><br>
-
-	        		<!--Cambiar contraseña-->
-	        		<button class="custom-btn" data-toggle="modal" data-target="#change-password">Cambiar contraseña</button>
+		        		<!--Descripción-->
+		        		<span class="badge badge-light">Sobre mí</span>
+		        		<textarea class="form-control" rows="3" id="aboutme" class="form-control" disabled>Breve descripción</textarea><br>
+	        		</form>
+		        	<!--Cambiar contraseña / MODAL-->
+		        	<button class="custom-btn" data-toggle="modal" data-target="#change-password">Cambiar contraseña</button>
 	        	</div>
 	        </div>
 		<!--Final del contenedor-->
@@ -107,36 +108,34 @@
 
 		<!--Modal cambiar contraseña-->
 		<div class="modal fade" id="change-password" tabindex="-1" role="dialog">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="exampleModalLabel">Cambiar contraseña</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <div class="modal-body">
-	        	<input type="password" name="" id="password" placeholder="contraseña" class="form-control"><br>
-	        	<input type="password" name="" id="repeat-password" placeholder="repite la contraseña" class="form-control"><br>
-		      </div>
-		      <div class="modal-footer">
-		        <button class="custom-btn" data-dismiss="modal">Cerrar</button>
-		        <button class="custom-btn">Guardar</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-
-		<!--footer-->
-		<!--<div id="footer" class="mt-5">
-			<div class="container-fluid text-center">
-				<img src="../img/logo.png" width="200px" class="mb-2">
-				<br>
-				<i class="fab fa-facebook-square fa-2x"></i>
-				<i class="fab fa-instagram fa-2x"></i>
-				<i class="fab fa-twitter-square fa-2x"></i>
+			<div class="modal-dialog" role="document">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+		        		<h5 class="modal-title" id="exampleModalLabel">Cambiar contraseña</h5>
+		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          			<span aria-hidden="true">&times;</span>
+		        		</button>
+		      		</div>
+		      		<div class="modal-body">
+		        		<input type="password" name="" id="first-pwd" placeholder="contraseña" class="form-control"><br>
+		        		<input type="password" name="" id="second-pwd" placeholder="repite la contraseña" class="form-control"><br>
+		        		<!--submit-->
+		        		<button type="submit" class="custom-btn" id="save-password">Guardar</button>
+		      		</div>
+		      		<div class="modal-footer">
+		        		<button class="custom-danger" data-dismiss="modal">Cerrar</button>
+		      		</div>
+		    	</div>
+		  	</div>
+		    <!--ALERTS / CAMBIO CONTRASEÑA-->
+			<div class="alert alert-warning text-center" id="alert-psw-success">
+			    La contraseña se ha cambiado.
 			</div>
-		</div>-->
+
+			<div class="alert alert-danger text-center" id="alert-psw-error">
+			    Las contraseñas no coinciden.
+			</div>
+		</div>
 
 	    <!--Scripts de bootstrap-->
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>

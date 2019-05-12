@@ -64,11 +64,11 @@
 					<!--ALERTS / LOGIN-->
 
 					<!--Credenciales incorrectas // display none-->
-					<div class="alert alert-danger mt-3 text-center d-none" role="alert" id="error-no-user">
+					<div class="alert alert-danger mt-3 text-center" role="alert" id="error-no-user">
 		  				Credenciales incorrectas.
 					</div>
 					<!--User banned // display none-->
-					<div class="alert alert-danger mt-3 text-center d-none" role="alert" id="error-banned">
+					<div class="alert alert-danger mt-3 text-center" role="alert" id="error-banned">
 		  				Esta cuenta está bloqueada, para más información contacta con el Administrador.
 					</div>
 				</form>
@@ -76,59 +76,61 @@
 
 			<!--Collapse / REGISTRO-->
 			<div class="collapse" id="register">
-				<form id="formulario">
-					<!--Nombre-->
-					<div class="form-group">
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text"><i class="fa fa-user"></i></span>
+				<div id="formulario">
+					<form id="form-submit">
+						<!--Nombre-->
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fa fa-user"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="nick" id="reg-nick">
 							</div>
-							<input type="email" class="form-control" placeholder="nick">
 						</div>
-					</div>
-					<!--email-->
-					<div class="form-group">
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text"><i class="fa fa-envelope"></i></span>
+						<!--email-->
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fa fa-envelope"></i></span>
+								</div>
+								<input type="email" class="form-control" placeholder="email" id="reg-email">
 							</div>
-							<input type="email" class="form-control" placeholder="email">
 						</div>
-					</div>
-					<!--password-->
-					<div class="form-group">
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text"><i class="fa fa-lock"></i></span>
+						<!--password-->
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fa fa-lock"></i></span>
+								</div>
+								<input type="password" class="form-control" id="reg-first-pwd" placeholder="contraseña">
 							</div>
-							<input type="password" class="form-control" placeholder="contraseña">
 						</div>
-					</div>
-					<!--repeat password-->
-					<div class="form-group">
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text"><i class="fa fa-lock"></i></span>
+						<!--repeat password-->
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fa fa-lock"></i></span>
+								</div>
+								<input type="password" class="form-control" id="reg-second-pwd" placeholder="repetir contraseña">
 							</div>
-							<input type="password" class="form-control" placeholder="repetir contraseña">
 						</div>
-					</div>
+					</form>
 					<hr>
 					<!--SUBMIT-->
-					<button class="custom-btn mb-5" type="submit">Registrar</button>
+					<button class="custom-btn mb-5" type="submit" id="register-btn">Registrar</button>
 
 
 					<!--ALERTS / LOGIN-->
 
 					<!--Error de registro // display none-->
-					<div class="alert alert-danger text-center d-none" role="alert" id="error-register">
+					<div class="alert alert-danger text-center" role="alert" id="reg-error">
 		  				Ha ocurrido un error, revisa los campos del formulario.
 					</div>
 					<!--Registro exitoso// display none-->
-					<div class="alert alert-dark text-center d-none" role="alert" id="error-register">
+					<div class="alert alert-dark text-center" role="alert" id="reg-success">
 		  				El usuario ha sido registrado exitosamente.
 					</div>
-				</form>
+				</div>
 			</div>
 
 		</div>
