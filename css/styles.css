@@ -6,7 +6,7 @@
 }
 
 #cuerpo {
-	margin-top: 35vh;
+	margin-top: 10vh;
 }
 
 .custom-btn{
@@ -35,7 +35,8 @@
 
 #form-container{
 	margin-top: 75px;
-	margin-left: auto;
+	/*margin-left: auto;*/
+	margin: auto;
 	display: flex;
 }
 
