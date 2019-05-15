@@ -1,6 +1,7 @@
 // WINDOW ONLOAD
 $(document).ready(function(){
 
+	// PELÍCULA O SERIE FAV BTN
 	$("#fav").change(function(){
 		if(this.checked){
 			$("#fav-alert").fadeIn();
@@ -8,7 +9,7 @@ $(document).ready(function(){
 		}
 	});
 
-	// filtros web
+	// FILTROS WEB
 	$("#apply-filters").click(function(){
 		var bar = document.getElementById("progress-bar");
 		$("#loading-screen").fadeIn();
@@ -20,7 +21,7 @@ $(document).ready(function(){
 		},1500);
 	});
 
-	// filtros modal
+	// FILTROS MODAL
 	$("#apply-filters-modal").click(function(){
 		var bar = document.getElementById("progress-bar");
 		$("#loading-screen").fadeIn();
@@ -54,13 +55,34 @@ $(document).ready(function(){
 	$("#register-btn").click(function(){
 		register();
 	});
+
+	// CHANGE IMG FORM - PELICULA
+	$("#btn-film-img").change(function(){
+		var img = $("#btn-film-img");
+		var imgContainer = $("#img-container-film");
+		replaceImg(imgContainer, img);
+	});
+
+	// CHANGE IMG FORM - SERIE
+	$("#btn-serie-img").change(function(){
+		var img = $("#btn-serie-img");
+		var imgContainer = $("#img-container-serie");
+		replaceImg(imgContainer, img);
+	});
+
+	// CHANGE IMG FORM - PERFIL
+	$("#btn-profile-img").change(function(){
+		var img = $("#btn-profile-img");
+		var imgContainer = $("#img-container");
+		replaceImg(imgContainer, img);
+	});
 });
 
 
 
 // FUNCTIONS //
 
-// barra de progreso
+// PROGRESS BAR
 function barAnimate(){
 	var bar = document.getElementById("progress-bar");
 	var width = 1;
@@ -76,14 +98,14 @@ function barAnimate(){
 	}
 }
 
-// habilita el formulario "editar perfil"
+// ENABLES FORM "EDITAR PERFIL"
 function enableForm(){
 	$("#nickname").prop("disabled",false);
 	$("#email").prop("disabled",false);
 	$("#aboutme").prop("disabled",false);	
 }
 
-// deshabilita el formulario "editar perfil"
+// DISABLES FORM "EDITAR PERFIL"
 function disableForm(){
 	var nickname = $("#nickname").val();
 	var email = $("#email").val();
@@ -98,7 +120,7 @@ function disableForm(){
 	}
 }
 
-// validación "editar perfil"
+// VALIDATES "EDIT PROFILE"
 function validateProfileForm(nickname, email){	
 	// comprueba el nombre
 	var nameExpr = /^[a-z]+$/i;
@@ -116,7 +138,7 @@ function validateProfileForm(nickname, email){
 	}
 }
 
-// validación "cambiar contraseña"
+// VALIDATES PASSWORDS
 function validatePasswords(firstPassword, secondPassword){
 	if(firstPassword != "" && secondPassword != ""){
 		if(firstPassword == secondPassword){
@@ -129,6 +151,7 @@ function validatePasswords(firstPassword, secondPassword){
 	}
 }
 
+// VALIDATES REGISTRATION
 function validateRegistration(nickname, email, firstPassword, secondPassword){	
 	// comprueba el nombre
 	var nameExpr = /^[a-z]+$/i;
@@ -184,6 +207,7 @@ function changePassword(){
 	}
 }
 
+// ENABLE / DISABLE USER FORM
 function updateUser(){
 	// deshabilita el formulario + alert
 	if(disableForm()){
@@ -195,5 +219,13 @@ function updateUser(){
 	}else{
 		$("#alert-changes-error").fadeIn();
 		window.setTimeout(function(){$("#alert-changes-error").fadeOut();},1500);
+	}
+}
+
+// CHANGES IMG - la img tiene que estar en la carpeta "img" del proyecto
+function replaceImg(imgContainer, img){
+	var fileName = img[0].files[0].name;
+	if(fileName != null){
+		imgContainer.attr("src", "../img/" + fileName);
 	}
 }
