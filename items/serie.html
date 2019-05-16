@@ -258,10 +258,11 @@
 
 					<h5 class="mt-5">Comentarios</h5><hr>
 					<!--Cajón de comentarios-->
-					<div>
+					<div id="comentarios">
 						<!--Comentarios-->
 						<div id="comment-container" class="container-fluid mt-1">
-							<div class="row comment-body">
+							<!--Comment 1-->
+							<div class="row comment-body mb-2">
 								<div class="my-2 col-usuario">
 									<div class=" text-center">
 										<img class="rounded-circle user-img" src="../img/user.png" alt="user-img">
@@ -278,11 +279,12 @@
 										<div class="text-right">
 											<span class="posted-data pr-2">25/04/2019 - 20:03</span>
 											<!--Botón para eliminar comentarios (Admin/moderador)-->
-											<button class="btn badge btn-danger mr-2"><i class="fa fa-trash-alt"></i></button>
+											<button class="btn badge btn-danger mr-2" id="delete-comment-0"><i class="fa fa-trash-alt"></i></button>
 										</div>
 									</div>
 								</div>
 							</div>
+							<!---->
 						</div>
 						<!---->
 
@@ -293,10 +295,10 @@
 									<div class="panel panel-info">
 										<div class="panel-body">
 											<!--Textarea-->
-											<textarea class="form-control" rows="3" placeholder="Escribe aquí"></textarea>
+											<textarea class="form-control" rows="3" placeholder="Escribe aquí" id="comment-txt"></textarea>
 											<!--FORM-->
 											<form class="form-inline">
-												<button class="custom-btn ml-auto mt-1" type="button">Publicar</button>
+												<button class="custom-btn ml-auto mt-1" type="button" id="comment-btn-serie">Publicar</button>
 											</form>
 										</div>
 									</div>

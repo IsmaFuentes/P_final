@@ -76,6 +76,27 @@ $(document).ready(function(){
 		var imgContainer = $("#img-container");
 		replaceImg(imgContainer, img);
 	});
+
+	// ADD COMMENT - FILM
+	$("#comment-btn-film").click(function(){
+		var comment = $("#comment-txt").val();
+		var container = $("#comment-container");
+		addComment(comment,container);
+	});
+
+	// ADD COMMENT - SERIE
+	$("#comment-btn-serie").click(function(){
+		var comment = $("#comment-txt").val();
+		var container = $("#comment-container");
+		addComment(comment,container);
+	});
+
+	// ADD COMMENT - CHAPTER
+	$("#comment-btn-chapter").click(function(){
+		var comment = $("#comment-txt").val();
+		var container = $("#comment-container");
+		addComment(comment,container);
+	});
 });
 
 
@@ -227,5 +248,52 @@ function replaceImg(imgContainer, img){
 	var fileName = img[0].files[0].name;
 	if(fileName != null){
 		imgContainer.attr("src", "../img/" + fileName);
+	}
+}
+
+// ADD COMMENT
+function addComment(comment, container){
+	// DATE / TIME
+	var dt = new Date();
+	var time = dt.getHours() + ":" + dt.getMinutes();
+	var month = dt.getMonth()+1;
+	var date = dt.getDay() + "/" + month + "/" + dt.getFullYear();
+
+	// USER PROPERTIES
+	var username = "Mr Bean";
+	var userImg = "mrbean2.jpg";
+
+	// COMMENT ID
+	var id = 1;
+
+	if(comment.length != 0){
+		// COMMENT DIV
+		var div = "<div class='row comment-body mb-2'>" + 
+				 	"<div class='my-2 col-usuario'>" +
+						"<div class='text-center'>" +
+							"<img class='rounded-circle user-img' src='../img/" + userImg + "' alt='user-img'>" +
+						"</div>" +
+					"<div class='text-center'>" +
+						"<span class='posted-data'>" + username + "</span>" + 
+					"</div>" +
+				  "</div>" +
+				  "<div class='my-2 text-left col-comentario'>" +
+					"<div class='comment' readonly>" +
+						"<p class='comment-text text-justify px-2'>" +
+							comment +
+						"</p>" + 
+						"<div class='text-right'>" + 
+							"<span class='posted-data pr-2'>" + date + " - " + time + "</span>" + 
+							"<button class='btn badge btn-danger mr-2' id='delete-comment-"+ id +"'><i class='fa fa-trash-alt'></i></button>" + 
+						"</div>" +
+					 "</div>" +
+				   "</div>" +
+				 "</div>";
+
+		container.append(div);
+		id++;
+	}
+	else{
+		alert("No pueden enviarse comentarios vacios.");
 	}
 }
