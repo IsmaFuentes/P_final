@@ -97,6 +97,16 @@ $(document).ready(function(){
 		var container = $("#comment-container");
 		addComment(comment,container);
 	});
+
+	// DELETE COMMENT
+	$("#comment-container").on("click", function(){
+		$(".delete-button").click(function(){
+			// borra toda la estructura del comentario
+			$(this).parent().parent().parent().parent().remove();
+		});
+	});
+
+	
 });
 
 
@@ -263,9 +273,6 @@ function addComment(comment, container){
 	var username = "Mr Bean";
 	var userImg = "mrbean2.jpg";
 
-	// COMMENT ID
-	var id = 1;
-
 	if(comment.length != 0){
 		// COMMENT DIV
 		var div = "<div class='row comment-body mb-2'>" + 
@@ -284,16 +291,16 @@ function addComment(comment, container){
 						"</p>" + 
 						"<div class='text-right'>" + 
 							"<span class='posted-data pr-2'>" + date + " - " + time + "</span>" + 
-							"<button class='btn badge btn-danger mr-2' id='delete-comment-"+ id +"'><i class='fa fa-trash-alt'></i></button>" + 
+							"<button class='btn badge btn-danger mr-2 delete-button'><i class='fa fa-trash-alt'></i></button>" + 
 						"</div>" +
 					 "</div>" +
 				   "</div>" +
 				 "</div>";
 
 		container.append(div);
-		id++;
 	}
 	else{
-		alert("No pueden enviarse comentarios vacios.");
+		$("#alert-comment").fadeIn();
+		window.setTimeout(function(){$("#alert-comment").fadeOut();},1500);
 	}
 }

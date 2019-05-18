@@ -14,195 +14,201 @@
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
 
-	<body id="user_body">
-		<!--Navbar-->
-		<nav class="navbar navbar-expand-md">
-			<span id="nav_logo" class="navbar-brand"></span>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
-				<i class="fa fa-bars" id="menu-ico"></i>
-			</button>
-			<!--izquierda-->
-			<div class="collapse navbar-collapse" id="nav-content">
-				<a href="../series.html" class="custom-link">Home</a>
-				<!--Usuario // dropdown-->
-				<div class="dropdown ml-auto">
-					<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<img class="rounded-circle ml-auto user-img" src="../img/user.png" alt="user-img">
-				  		<span class="caret"></span>
-					</button>
-				  	<div class="dropdown-menu dropdown-menu-right">
-				    	<a class="dropdown-item" href="perfil.html">Perfil</a>
-				    	<a class="dropdown-item" href="usuarios.html">Administrar usuarios</a>
-				    	<a class="dropdown-item" href="contenido.html">Añadir contenido</a>
-				    	<div class="dropdown-divider"></div>
-				    	<a class="dropdown-item" href="../index.html">Cerrar sesión</a>
-				  	</div>
+	<body>
+
+		<div id="body">
+
+			<!--Navbar-->
+			<nav class="navbar navbar-expand-md">
+				<span id="nav_logo" class="navbar-brand"></span>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
+					<i class="fa fa-bars" id="menu-ico"></i>
+				</button>
+				<!--izquierda-->
+				<div class="collapse navbar-collapse" id="nav-content">
+					<a href="../series.html" class="custom-link">Home</a>
+					<!--Usuario // dropdown-->
+					<div class="dropdown ml-auto">
+						<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img class="rounded-circle ml-auto user-img" src="../img/user.png" alt="user-img">
+					  		<span class="caret"></span>
+						</button>
+					  	<div class="dropdown-menu dropdown-menu-right">
+					    	<a class="dropdown-item" href="perfil.html">Perfil</a>
+					    	<a class="dropdown-item" href="usuarios.html">Administrar usuarios</a>
+					    	<a class="dropdown-item" href="contenido.html">Añadir contenido</a>
+					    	<div class="dropdown-divider"></div>
+					    	<a class="dropdown-item" href="../index.html">Cerrar sesión</a>
+					  	</div>
+					</div>
 				</div>
-			</div>
-		</nav>
+			</nav>
 
-		<!--Contenedor principal-->
-		<div class="container-fluid mt-4">
-			<!--AÑADIR PELICULA/SERIE 2 COLUMNAS-->
-			<div class="row">
+			<!--Contenedor principal-->
+			<div class="container-fluid mt-4">
+				<!--AÑADIR PELICULA/SERIE 2 COLUMNAS-->
+				<div class="row">
 
-				<!--PELICULA-->
-				<div class="col-lg-6 col-sm-12">
-					<!--Cabecera-->
-			        <div class="table-title mb-3">
-						<h2>Película</h2>
-			        </div>
-					<!--Form añadir pelicula-->
-					<form id="new-film">
-			        	<!--Cambiar imágen-->
-			        	<div class="mt-2 text-center">
-			        		<img src="../img/placeholder.jpg" class="film-ico" id="img-container-film">
-			        		<div>
-								<label for="btn-film-img" class="custom-btn mt-2">
-									<i class="fa fa-images"></i> Selecciona Img 
-								</label>
-					        	<input type="file" name="profile" id="btn-film-img">
-				        	</div>
-			       		</div>
-						<!--Título-->
-						<div class="form-group mt-2">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-film"></i></span>
+					<!--PELICULA-->
+					<div class="col-lg-6 col-sm-12">
+						<!--Cabecera-->
+				        <div class="table-title mb-3">
+							<h2>Película</h2>
+				        </div>
+						<!--Form añadir pelicula-->
+						<form id="new-film">
+				        	<!--Cambiar imágen-->
+				        	<div class="mt-2 text-center">
+				        		<img src="../img/placeholder.jpg" class="film-ico" id="img-container-film">
+				        		<div>
+									<label for="btn-film-img" class="custom-btn mt-2">
+										<i class="fa fa-images"></i> Selecciona Img 
+									</label>
+						        	<input type="file" name="profile" id="btn-film-img">
+					        	</div>
+				       		</div>
+							<!--Título-->
+							<div class="form-group mt-2">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-film"></i></span>
+									</div>
+									<input type="text" class="form-control" placeholder="Título" id="film-name">
 								</div>
-								<input type="text" class="form-control" placeholder="Título" id="film-name">
 							</div>
-						</div>
-						<!--Duración-->
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-clock"></i></span>
+							<!--Duración-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-clock"></i></span>
+									</div>
+									<input type="number" class="form-control" placeholder="Duración (Min)" id="film-duration">
 								</div>
-								<input type="number" class="form-control" placeholder="Duración (Min)" id="film-duration">
 							</div>
-						</div>
-						<!--Descripción-->
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-pen"></i></span>
+							<!--Descripción-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-pen"></i></span>
+									</div>
+									<textarea class="form-control" placeholder="Descripción" rows="4"></textarea>
 								</div>
-								<textarea class="form-control" placeholder="Descripción" rows="4"></textarea>
 							</div>
-						</div>
-						<!--Género-->
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-film"></i></span>
+							<!--Género-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-film"></i></span>
+									</div>
+									<select multiple class="form-control">
+										<option value="terror">Terror</option>
+									  	<option value="comedia">Comédia</option>
+									  	<option value="drama">Drama</option>
+									  	<option value="suspense">Suspense</option>
+									  	<option value="ficcion">Ciéncia ficción</option>
+									  	<option value="romantica">Romántica</option>
+									</select>
 								</div>
-								<select multiple class="form-control">
-									<option value="terror">Terror</option>
-								  	<option value="comedia">Comédia</option>
-								  	<option value="drama">Drama</option>
-								  	<option value="suspense">Suspense</option>
-								  	<option value="ficcion">Ciéncia ficción</option>
-								  	<option value="romantica">Romántica</option>
-								</select>
 							</div>
+				       		<!--RATING-->
+				       		<div class="form-group mt-2">
+				       			<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-star-half-alt"></i></span>
+									</div>
+									<input type="number" class="form-control" placeholder="Puntuación (1-5)" id="film-rating">
+				       			</div>
+				       		</div>
+						</form>
+						<!--SUBMIT-->
+						<div class="mt-2 mb-3">
+							<button class="custom-btn" id="film-save">Guardar</button>
 						</div>
-			       		<!--RATING-->
-			       		<div class="form-group mt-2">
-			       			<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fas fa-star-half-alt"></i></span>
+					</div>
+
+					<!--SERIE-->
+					<div class="col-lg-6 col-sm-12">
+						<!--Cabecera-->
+				        <div class="table-title mb-3">
+							<h2>Serie</h2>
+				        </div>
+						<!--Form añadir serie-->
+						<form id="new-serie">
+				        	<!--Cambiar imágen-->
+				        	<div class="mt-2 text-center">
+				        		<img src="../img/placeholder.jpg" class="film-ico" id="img-container-serie">
+				        		<div>
+									<label for="btn-serie-img" class="custom-btn mt-2">
+										<i class="fa fa-images"></i> Selecciona Img 
+									</label>
+						        	<input type="file" name="profile" id="btn-serie-img">
+					        	</div>
+				       		</div>
+							<!--Título-->
+							<div class="form-group mt-2">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-film"></i></span>
+									</div>
+									<input type="text" class="form-control" placeholder="Título" id="serie-name">
 								</div>
-								<input type="number" class="form-control" placeholder="Puntuación (1-5)" id="film-rating">
-			       			</div>
-			       		</div>
-					</form>
-					<!--SUBMIT-->
-					<div class="mt-2 mb-3">
-						<button class="custom-btn" id="film-save">Guardar</button>
+							</div>
+							<!--Duración-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-clock"></i></span>
+									</div>
+									<input type="number" class="form-control" placeholder="Duración (Min)" id="serie-duration">
+								</div>
+							</div>
+							<!--Descripción-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-pen"></i></span>
+									</div>
+									<textarea class="form-control" placeholder="Descripción" rows="4"></textarea>
+								</div>
+							</div>
+							<!--Género-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-film"></i></span>
+									</div>
+									<select multiple class="form-control">
+										<option value="terror">Terror</option>
+									  	<option value="comedia">Comédia</option>
+									  	<option value="drama">Drama</option>
+									  	<option value="suspense">Suspense</option>
+									  	<option value="ficcion">Ciéncia ficción</option>
+									  	<option value="romantica">Romántica</option>
+									</select>
+								</div>
+							</div>
+				       		<!--RATING-->
+				       		<div class="form-group mt-2">
+				       			<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-star-half-alt"></i></span>
+									</div>
+									<input type="number" class="form-control" placeholder="Puntuación (1-5)" id="serie-rating">
+				       			</div>
+				       		</div>
+						</form>
+						<!--SUBMIT-->
+						<div class="mt-2 mb-3">
+							<button class="custom-btn" id="serie-save">Guardar</button>
+						</div>
 					</div>
 				</div>
 
-				<!--SERIE-->
-				<div class="col-lg-6 col-sm-12">
-					<!--Cabecera-->
-			        <div class="table-title mb-3">
-						<h2>Serie</h2>
-			        </div>
-					<!--Form añadir serie-->
-					<form id="new-serie">
-			        	<!--Cambiar imágen-->
-			        	<div class="mt-2 text-center">
-			        		<img src="../img/placeholder.jpg" class="film-ico" id="img-container-serie">
-			        		<div>
-								<label for="btn-serie-img" class="custom-btn mt-2">
-									<i class="fa fa-images"></i> Selecciona Img 
-								</label>
-					        	<input type="file" name="profile" id="btn-serie-img">
-				        	</div>
-			       		</div>
-						<!--Título-->
-						<div class="form-group mt-2">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-film"></i></span>
-								</div>
-								<input type="text" class="form-control" placeholder="Título" id="serie-name">
-							</div>
-						</div>
-						<!--Duración-->
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-clock"></i></span>
-								</div>
-								<input type="number" class="form-control" placeholder="Duración (Min)" id="serie-duration">
-							</div>
-						</div>
-						<!--Descripción-->
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-pen"></i></span>
-								</div>
-								<textarea class="form-control" placeholder="Descripción" rows="4"></textarea>
-							</div>
-						</div>
-						<!--Género-->
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-film"></i></span>
-								</div>
-								<select multiple class="form-control">
-									<option value="terror">Terror</option>
-								  	<option value="comedia">Comédia</option>
-								  	<option value="drama">Drama</option>
-								  	<option value="suspense">Suspense</option>
-								  	<option value="ficcion">Ciéncia ficción</option>
-								  	<option value="romantica">Romántica</option>
-								</select>
-							</div>
-						</div>
-			       		<!--RATING-->
-			       		<div class="form-group mt-2">
-			       			<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fas fa-star-half-alt"></i></span>
-								</div>
-								<input type="number" class="form-control" placeholder="Puntuación (1-5)" id="serie-rating">
-			       			</div>
-			       		</div>
-					</form>
-					<!--SUBMIT-->
-					<div class="mt-2 mb-3">
-						<button class="custom-btn" id="serie-save">Guardar</button>
-					</div>
-				</div>
+
+			<!--Final del contenedor-->
 			</div>
 
-
-		<!--Final del contenedor-->
+		<!--End body-->
 		</div>
 
 

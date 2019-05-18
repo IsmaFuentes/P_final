@@ -16,382 +16,377 @@
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
 	</head>
 
-	<body id="user_body">
-		<!--Navbar-->
-		<nav class="navbar navbar-expand-md">
-			<span id="nav_logo" class="navbar-brand"></span>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
-				<i class="fa fa-bars" id="menu-ico"></i>
-			</button>
-			<!--izquierda-->
-			<div class="collapse navbar-collapse" id="nav-content">
-				<a href="../series.html" class="custom-link">Home</a>
-				<!--Usuario // dropdown-->
-				<div class="dropdown ml-auto">
-					<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<img class="rounded-circle ml-auto user-img" src="../img/user.png" alt="user-img">
-				  		<span class="caret"></span>
-					</button>
-				  	<div class="dropdown-menu dropdown-menu-right">
-				    	<a class="dropdown-item" href="perfil.html">Perfil</a>
-				    	<a class="dropdown-item" href="usuarios.html">Administrar usuarios</a>
-				    	<a class="dropdown-item" href="contenido.html">Añadir contenido</a>
-				    	<div class="dropdown-divider"></div>
-				    	<a class="dropdown-item" href="../index.html">Cerrar sesión</a>
-				  	</div>
+	<body>
+
+		<div id="body">
+
+			<!--Navbar-->
+			<nav class="navbar navbar-expand-md">
+				<span id="nav_logo" class="navbar-brand"></span>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
+					<i class="fa fa-bars" id="menu-ico"></i>
+				</button>
+				<!--izquierda-->
+				<div class="collapse navbar-collapse" id="nav-content">
+					<a href="../series.html" class="custom-link">Home</a>
+					<!--Usuario // dropdown-->
+					<div class="dropdown ml-auto">
+						<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img class="rounded-circle ml-auto user-img" src="../img/user.png" alt="user-img">
+					  		<span class="caret"></span>
+						</button>
+					  	<div class="dropdown-menu dropdown-menu-right">
+					    	<a class="dropdown-item" href="perfil.html">Perfil</a>
+					    	<a class="dropdown-item" href="usuarios.html">Administrar usuarios</a>
+					    	<a class="dropdown-item" href="contenido.html">Añadir contenido</a>
+					    	<div class="dropdown-divider"></div>
+					    	<a class="dropdown-item" href="../index.html">Cerrar sesión</a>
+					  	</div>
+					</div>
 				</div>
-			</div>
-		</nav>
-
-		<!--Contenedor principal-->
-		<div class="container-fluid mt-4">
-			<!--Cabecera-->
-	        <div class="table-title">
-	            <div class="row">
-	                <div class="col-sm-6">
-						<h2>Administrar <b>usuarios</b></h2>
-					</div>
-					<div class="col-sm-6">
-						<!--Botones añadir usuario / eliminar-->
-						<div class="float-sm-right mt-1">
-							<button class="custom-btn" data-toggle="modal" data-target="#nuevo-usuario"><span>Nuevo usuario</span></button>	
-							<button class="custom-danger"><span>Eliminar</span></button>
-						</div>			
-					</div>
-	            </div>
-	        </div>
-			<div class="table-responsive">
-	            <!--Tabla de usuarios-->
-				<table class="table table-borderless table-hover tabla text-center">
-					<!--PRIMERA ROW / CABECERA-->
-  					<thead class="">
-    					<tr>
-					    	<th scope="col"><button class="btn btn-secondary">All</button></th>
-					      	<th scope="col">Nick</th>
-					     	<th scope="col">Email</th>
-					      	<th scope="col">Banned</th>
-					      	<th scope="col">Hidden</th>
-					      	<th scope="col">CreatedAt</th>
-					      	<th scope="col">Status</th>
-					      	<th scope="col">Role</th>
-					      	<th scope="col">Edit</th>
-    					</tr>
-  					</thead>
-  					<!--CUERPO-->
-  					<tbody>
-					    <tr>
-					    	<!--Row 1-->
-					      	<th scope="row">
-								<!--Custom Checkbox-->
-								<div class="pretty p-default p-switch p-fill mt-2">
-									<input type="checkbox" id="user1">
-									<div class="state">
-									    <label></label>
-									</div>
-								</div>
-					      	</th>
-					      	<td>Mark</td>
-					      	<td>Mark@gmail.com</td>
-					      	<td>
-								<!--Custom Checkbox banned-->
-								<div class="pretty p-default p-switch p-fill mt-2">
-									<input type="checkbox" id="check1" disabled checked>
-									<div class="state">
-									    <label></label>
-									</div>
-								</div>
-					      	</td>
-					      	<td>
-								<!--Custom Checkbox hidden-->
-								<div class="pretty p-default p-switch p-fill mt-2">
-									<input type="checkbox" id="check1" disabled>
-									<div class="state">
-									    <label></label>
-									</div>
-								</div>
-					      	</td>
-					      	<td>20/03/2019</td>
-					      	<td>Verified</td>
-					      	<td><input type="number" max="3" min="1" value="1" disabled class="custom-btn"></td>
-					      	<td>
-					      		<!--EDIT BTN-->
-					      		<button class="custom-btn" id="edit" data-toggle="modal" data-target="#editar-usuario"><i class="fa fa-pencil-alt"></i></button>
-					      	</td>
-					    </tr>
-					    <!--Row 2-->
-					    <tr>
-					      	<th scope="row">
-								<!--Custom Checkbox-->
-								<div class="pretty p-default p-switch p-fill mt-2">
-									<input type="checkbox" id="user2">
-									<div class="state">
-									    <label></label>
-									</div>
-								</div>
-					      	</th>
-					      	<td>Otto</td>
-					      	<td>Otto@hotmail.es</td>
-					      	<td>
-								<!--Custom Checkbox banned-->
-								<div class="pretty p-default p-switch p-fill mt-2">
-									<input type="checkbox" id="check1" disabled>
-									<div class="state">
-									    <label></label>
-									</div>
-								</div>
-					      	</td>
-					      	<td>
-								<!--Custom Checkbox hidden-->
-								<div class="pretty p-default p-switch p-fill mt-2">
-									<input type="checkbox" id="check1" disabled>
-									<div class="state">
-									    <label></label>
-									</div>
-								</div>
-					      	</td>
-					      	<td>20/03/2019</td>
-					      	<td>Unverified</td>
-					      	<td><input type="number" max="3" min="1" value="3" disabled class="custom-btn"></td>
-					      	<td>
-					      		<!--EDIT BTN-->
-					      		<button class="custom-btn" id="edit" data-toggle="modal" data-target="#editar-usuario"><i class="fa fa-pencil-alt"></i></button>
-					      	</td>
-					    </tr>
-					    <!--Row 3-->
-					    <tr>
-					      	<th scope="row">
-								<!--Custom Checkbox-->
-								<div class="pretty p-default p-switch p-fill mt-2">
-									<input type="checkbox" id="user3">
-									<div class="state">
-									    <label></label>
-									</div>
-								</div>
-					      	</th>
-					      	<td>John</td>
-					      	<td>John@yahoo.es</td>
-					      	<td>
-								<!--Custom Checkbox banned-->
-								<div class="pretty p-default p-switch p-fill mt-2">
-									<input type="checkbox" id="check1" disabled>
-									<div class="state">
-									    <label></label>
-									</div>
-								</div>
-					      	</td>
-					      	<td>
-								<!--Custom Checkbox hidden-->
-								<div class="pretty p-default p-switch p-fill mt-2">
-									<input type="checkbox" id="check1" disabled checked>
-									<div class="state">
-									    <label></label>
-									</div>
-								</div>
-					      	</td>
-					      	<td>20/03/2019</td>
-					      	<td>Verified</td>
-					      	<td><input type="number" max="3" min="1" value="2" disabled class="custom-btn"></td>
-					      	<td>
-					      		<!--EDIT BTN-->
-					      		<button class="custom-btn" id="edit" data-toggle="modal" data-target="#editar-usuario"><i class="fa fa-pencil-alt"></i></button>
-					      	</td>
-					    </tr>
-				  	</tbody>
-				</table>		
-			</div>
-
-			<!--Paginación-->
-			<nav aria-label="Paginación" class="mt-4">
-				<ul class="pagination">
-					<li class="page-item">
-						<a class="page-link" href="#" aria-label="Previous">
-							<span aria-hidden="true">&laquo;</span>
-						    <span class="sr-only">atrás</span>
-						</a>
-					</li>
-					<li class="page-item"><a class="page-link" href="#">1</a></li>
-					<li class="page-item"><a class="page-link" href="#">2</a></li>
-					<li class="page-item"><a class="page-link" href="#">3</a></li>
-					<li class="page-item">
-						<a class="page-link" href="#" aria-label="Next">
-							<span aria-hidden="true">&raquo;</span>
-							<span class="sr-only">siguiente</span>
-						</a>
-					</li>
-				</ul>
 			</nav>
-		<!--Final del contenedor-->
-		</div>
 
-		<!--Ventanas modales-->
-
-		<!--Nuevo usuario-->
-		<div class="modal fade" id="nuevo-usuario" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-			<div class="modal-dialog modal-lg" role="document">
-		    	<div class="modal-content">
-		      		<div class="modal-header">
-		        		<h5 class="modal-title" id="modal-label">Nuevo usuario</h5>
-		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          			<span aria-hidden="true">&times;</span>
-		        		</button>
-		      		</div>
-		      		<div class="modal-body">
-		      			<!--Form-->
-		        		<form id="#crear-usuario">
-							<!--Nombre-->
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fa fa-user"></i></span>
-									</div>
-									<input type="email" class="form-control" placeholder="nick">
-								</div>
-							</div>
-							<!--email-->
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fa fa-envelope"></i></span>
-									</div>
-									<input type="email" class="form-control" placeholder="email">
-								</div>
-							</div>
-							<!--password-->
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fa fa-lock"></i></span>
-									</div>
-									<input type="password" class="form-control" placeholder="contraseña">
-								</div>
-							</div>
-							<!--Rol del usuario-->
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fa fa-users-cog"></i></span>
-									</div>
-									<input class="form-control" type="number" max="3" min="1" placeholder="permisos">
-								</div>
-							</div>
-							<!--Estado-->
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fa fa-user-check"></i></span>
-									</div>
-									<select class="form-control">
-										<option selected>Verified</option>
-										<option>Unverified</option>
-									</select>
-								</div>
-							</div>
-		        		</form>
-		      		</div>
-		      		<div class="modal-footer">
-		      			<button type="button" class="custom-btn">Crear</button>
-		        		<button type="button" class="custom-danger" data-dismiss="modal">Cancelar</button>
-		      		</div>
-		    	</div>
-		  	</div>
-		</div>
-
-		<!--Editar usuario-->
-		<div class="modal fade" id="editar-usuario" tabindex="-1" role="dialog" aria-labelledby="modal-label-edit" aria-hidden="true">
-			<div class="modal-dialog modal-lg" role="document">
-		    	<div class="modal-content">
-		      		<div class="modal-header">
-		        		<h5 class="modal-title" id="modal-label-edit">Editar usuario</h5>
-		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          			<span aria-hidden="true">&times;</span>
-		        		</button>
-		      		</div>
-		      		<div class="modal-body">
-		      			<!--Form-->
-		        		<form id="#crear-usuario">
-							<!--Nombre-->
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fa fa-user"></i></span>
-									</div>
-									<input type="email" class="form-control" placeholder="nick">
-								</div>
-							</div>
-							<!--email-->
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fa fa-envelope"></i></span>
-									</div>
-									<input type="email" class="form-control" placeholder="email">
-								</div>
-							</div>
-							<!--Rol del usuario-->
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fa fa-users-cog"></i></span>
-									</div>
-									<input class="form-control" type="number" max="3" min="1" placeholder="permisos">
-								</div>
-							</div>
-							<!--Estado-->
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fa fa-user-check"></i></span>
-									</div>
-									<select class="form-control">
-										<option selected>Verified</option>
-										<option>Unverified</option>
-									</select>
-								</div>
-							</div>
-							<!--Banned-->
-							<div class="form-group">
-								<div class="input-group">
-									<!--Checkbox-->
+			<!--Contenedor principal-->
+			<div class="container-fluid mt-4">
+				<!--Cabecera-->
+		        <div class="table-title">
+		            <div class="row">
+		                <div class="col-sm-6">
+							<h2>Administrar <b>usuarios</b></h2>
+						</div>
+						<div class="col-sm-6">
+							<!--Botones añadir usuario / eliminar-->
+							<div class="float-sm-right mt-1">
+								<button class="custom-btn" data-toggle="modal" data-target="#nuevo-usuario"><span>Nuevo usuario</span></button>	
+								<button class="custom-danger"><span>Eliminar</span></button>
+							</div>			
+						</div>
+		            </div>
+		        </div>
+				<div class="table-responsive">
+		            <!--Tabla de usuarios-->
+					<table class="table table-borderless table-hover tabla text-center">
+						<!--PRIMERA ROW / CABECERA-->
+	  					<thead class="">
+	    					<tr>
+						    	<th scope="col"><button class="btn btn-secondary">All</button></th>
+						      	<th scope="col">Nick</th>
+						     	<th scope="col">Email</th>
+						      	<th scope="col">Banned</th>
+						      	<th scope="col">Hidden</th>
+						      	<th scope="col">CreatedAt</th>
+						      	<th scope="col">Status</th>
+						      	<th scope="col">Role</th>
+						      	<th scope="col">Edit</th>
+	    					</tr>
+	  					</thead>
+	  					<!--CUERPO-->
+	  					<tbody>
+						    <tr>
+						    	<!--Row 1-->
+						      	<th scope="row">
+									<!--Custom Checkbox-->
 									<div class="pretty p-default p-switch p-fill mt-2">
-									    <input type="checkbox">
-									    <div class="state">
-									       <label>Banned</label>
-									    </div>
+										<input type="checkbox" id="user1">
+										<div class="state">
+										    <label></label>
+										</div>
 									</div>
-								</div>
-							</div>
-							<!--Hidden-->
-							<div class="form-group">
-								<div class="input-group">
-									<!--Checkbox-->
+						      	</th>
+						      	<td>Mark</td>
+						      	<td>Mark@gmail.com</td>
+						      	<td>
+									<!--Custom Checkbox banned-->
 									<div class="pretty p-default p-switch p-fill mt-2">
-									    <input type="checkbox">
-									    <div class="state">
-									       <label>Hidden</label>
-									    </div>
+										<input type="checkbox" id="check1" disabled checked>
+										<div class="state">
+										    <label></label>
+										</div>
 									</div>
-								</div>
-							</div>
-		        		</form>
-		      		</div>
-		      		<div class="modal-footer">
-		      			<button type="button" class="custom-btn">Guardar</button>
-		        		<button type="button" class="custom-danger" data-dismiss="modal">Cancelar</button>
-		      		</div>
-		    	</div>
-		  	</div>
-		</div>
-		<!--footer-->
-		<!--
-		<div id="footer" class="mt-5">
-			<div class="container-fluid text-center">
-				<img src="../img/logo.png" width="200px" class="mb-2">
-				<br>
-				<i class="fab fa-facebook-square fa-2x"></i>
-				<i class="fab fa-instagram fa-2x"></i>
-				<i class="fab fa-twitter-square fa-2x"></i>
+						      	</td>
+						      	<td>
+									<!--Custom Checkbox hidden-->
+									<div class="pretty p-default p-switch p-fill mt-2">
+										<input type="checkbox" id="check1" disabled>
+										<div class="state">
+										    <label></label>
+										</div>
+									</div>
+						      	</td>
+						      	<td>20/03/2019</td>
+						      	<td>Verified</td>
+						      	<td><input type="number" max="3" min="1" value="1" disabled class="custom-btn"></td>
+						      	<td>
+						      		<!--EDIT BTN-->
+						      		<button class="custom-btn" id="edit" data-toggle="modal" data-target="#editar-usuario"><i class="fa fa-pencil-alt"></i></button>
+						      	</td>
+						    </tr>
+						    <!--Row 2-->
+						    <tr>
+						      	<th scope="row">
+									<!--Custom Checkbox-->
+									<div class="pretty p-default p-switch p-fill mt-2">
+										<input type="checkbox" id="user2">
+										<div class="state">
+										    <label></label>
+										</div>
+									</div>
+						      	</th>
+						      	<td>Otto</td>
+						      	<td>Otto@hotmail.es</td>
+						      	<td>
+									<!--Custom Checkbox banned-->
+									<div class="pretty p-default p-switch p-fill mt-2">
+										<input type="checkbox" id="check1" disabled>
+										<div class="state">
+										    <label></label>
+										</div>
+									</div>
+						      	</td>
+						      	<td>
+									<!--Custom Checkbox hidden-->
+									<div class="pretty p-default p-switch p-fill mt-2">
+										<input type="checkbox" id="check1" disabled>
+										<div class="state">
+										    <label></label>
+										</div>
+									</div>
+						      	</td>
+						      	<td>20/03/2019</td>
+						      	<td>Unverified</td>
+						      	<td><input type="number" max="3" min="1" value="3" disabled class="custom-btn"></td>
+						      	<td>
+						      		<!--EDIT BTN-->
+						      		<button class="custom-btn" id="edit" data-toggle="modal" data-target="#editar-usuario"><i class="fa fa-pencil-alt"></i></button>
+						      	</td>
+						    </tr>
+						    <!--Row 3-->
+						    <tr>
+						      	<th scope="row">
+									<!--Custom Checkbox-->
+									<div class="pretty p-default p-switch p-fill mt-2">
+										<input type="checkbox" id="user3">
+										<div class="state">
+										    <label></label>
+										</div>
+									</div>
+						      	</th>
+						      	<td>John</td>
+						      	<td>John@yahoo.es</td>
+						      	<td>
+									<!--Custom Checkbox banned-->
+									<div class="pretty p-default p-switch p-fill mt-2">
+										<input type="checkbox" id="check1" disabled>
+										<div class="state">
+										    <label></label>
+										</div>
+									</div>
+						      	</td>
+						      	<td>
+									<!--Custom Checkbox hidden-->
+									<div class="pretty p-default p-switch p-fill mt-2">
+										<input type="checkbox" id="check1" disabled checked>
+										<div class="state">
+										    <label></label>
+										</div>
+									</div>
+						      	</td>
+						      	<td>20/03/2019</td>
+						      	<td>Verified</td>
+						      	<td><input type="number" max="3" min="1" value="2" disabled class="custom-btn"></td>
+						      	<td>
+						      		<!--EDIT BTN-->
+						      		<button class="custom-btn" id="edit" data-toggle="modal" data-target="#editar-usuario"><i class="fa fa-pencil-alt"></i></button>
+						      	</td>
+						    </tr>
+					  	</tbody>
+					</table>		
+				</div>
+
+				<!--Paginación-->
+				<nav aria-label="Paginación" class="mt-4">
+					<ul class="pagination">
+						<li class="page-item">
+							<a class="page-link" href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							    <span class="sr-only">atrás</span>
+							</a>
+						</li>
+						<li class="page-item"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item">
+							<a class="page-link" href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+								<span class="sr-only">siguiente</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			<!--Final del contenedor-->
 			</div>
-		</div>-->
+
+			<!--Ventanas modales-->
+
+			<!--Nuevo usuario-->
+			<div class="modal fade" id="nuevo-usuario" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+			        		<h5 class="modal-title" id="modal-label">Nuevo usuario</h5>
+			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          			<span aria-hidden="true">&times;</span>
+			        		</button>
+			      		</div>
+			      		<div class="modal-body">
+			      			<!--Form-->
+			        		<form id="#crear-usuario">
+								<!--Nombre-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fa fa-user"></i></span>
+										</div>
+										<input type="email" class="form-control" placeholder="nick">
+									</div>
+								</div>
+								<!--email-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fa fa-envelope"></i></span>
+										</div>
+										<input type="email" class="form-control" placeholder="email">
+									</div>
+								</div>
+								<!--password-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fa fa-lock"></i></span>
+										</div>
+										<input type="password" class="form-control" placeholder="contraseña">
+									</div>
+								</div>
+								<!--Rol del usuario-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fa fa-users-cog"></i></span>
+										</div>
+										<input class="form-control" type="number" max="3" min="1" placeholder="permisos">
+									</div>
+								</div>
+								<!--Estado-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fa fa-user-check"></i></span>
+										</div>
+										<select class="form-control">
+											<option selected>Verified</option>
+											<option>Unverified</option>
+										</select>
+									</div>
+								</div>
+			        		</form>
+			      		</div>
+			      		<div class="modal-footer">
+			      			<button type="button" class="custom-btn">Crear</button>
+			        		<button type="button" class="custom-danger" data-dismiss="modal">Cancelar</button>
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+
+			<!--Editar usuario-->
+			<div class="modal fade" id="editar-usuario" tabindex="-1" role="dialog" aria-labelledby="modal-label-edit" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+			        		<h5 class="modal-title" id="modal-label-edit">Editar usuario</h5>
+			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          			<span aria-hidden="true">&times;</span>
+			        		</button>
+			      		</div>
+			      		<div class="modal-body">
+			      			<!--Form-->
+			        		<form id="#crear-usuario">
+								<!--Nombre-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fa fa-user"></i></span>
+										</div>
+										<input type="email" class="form-control" placeholder="nick">
+									</div>
+								</div>
+								<!--email-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fa fa-envelope"></i></span>
+										</div>
+										<input type="email" class="form-control" placeholder="email">
+									</div>
+								</div>
+								<!--Rol del usuario-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fa fa-users-cog"></i></span>
+										</div>
+										<input class="form-control" type="number" max="3" min="1" placeholder="permisos">
+									</div>
+								</div>
+								<!--Estado-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fa fa-user-check"></i></span>
+										</div>
+										<select class="form-control">
+											<option selected>Verified</option>
+											<option>Unverified</option>
+										</select>
+									</div>
+								</div>
+								<!--Banned-->
+								<div class="form-group">
+									<div class="input-group">
+										<!--Checkbox-->
+										<div class="pretty p-default p-switch p-fill mt-2">
+										    <input type="checkbox">
+										    <div class="state">
+										       <label>Banned</label>
+										    </div>
+										</div>
+									</div>
+								</div>
+								<!--Hidden-->
+								<div class="form-group">
+									<div class="input-group">
+										<!--Checkbox-->
+										<div class="pretty p-default p-switch p-fill mt-2">
+										    <input type="checkbox">
+										    <div class="state">
+										       <label>Hidden</label>
+										    </div>
+										</div>
+									</div>
+								</div>
+			        		</form>
+			      		</div>
+			      		<div class="modal-footer">
+			      			<button type="button" class="custom-btn">Guardar</button>
+			        		<button type="button" class="custom-danger" data-dismiss="modal">Cancelar</button>
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+
+		<!--End body-->
+		</div>
 
 	    <!--Scripts de bootstrap-->
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>

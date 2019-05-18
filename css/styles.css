@@ -3,11 +3,9 @@
 #main_body{
 	background: linear-gradient(to right, rgb(211, 131, 18), rgb(168, 50, 121));
 	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
 }
 
-#cuerpo {
-	margin-top: 10vh;
-}
 
 .custom-btn{
 	border: none;
@@ -82,7 +80,7 @@
 }
 
 
-#user_body{
+#body{
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -452,6 +450,12 @@
 	display: none;
 }
 
+#alert-comment {
+	display: none;
+	position: absolute;
+	z-index: 20;
+	float: right;
+}
 /*******************************************************/
 
 

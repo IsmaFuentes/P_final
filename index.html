@@ -14,127 +14,130 @@
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
 
-	<body id="main_body">
-		<div class="container" id="cuerpo">
-			<!--Principal-->
-			<div class="row">
-				<!--Logo & description-->
-				<!--<div class="col-lg-6 col-md-12 col-sm-12 text-center">-->
-				<div class="col-lg-12 text-center">
-					<img class="img-fluid" src="img/logo.png">
-				</div>
-				<!--Login / register-->
-				<!--<div class="col-lg-6 col-md-12 col-sm-12">-->
-				<div class="col-lg-12">
-					<div class="row">
-						<div id="form-container">
-							<div class="form-group p-2 mt-3">
-								<button class="custom-btn" type="button" data-toggle="collapse" data-target="#login">Login</button>
-							</div>
-							<div class="form-group p-2 mt-3">
-								<button class="custom-btn" type="button" data-toggle="collapse" data-target="#register">Registro</button>
-							</div>
-						</div>
+	<body>
+		<div id="main_body">
+			
+			<div class="container">
+				<!--Principal-->
+				<div class="row">
+					<!--Logo & description-->
+					<!--<div class="col-lg-6 col-md-12 col-sm-12 text-center">-->
+					<div class="col-lg-12 text-center">
+						<img class="img-fluid" src="img/logo.png">
 					</div>
-				</div>
-			</div>
-
-			<!--Collapse / LOGIN-->
-			<div class="collapse mb-5" id="login">
-				<!--Login-->
-				<form id="formulario" action="series.html">
-					<div class="form-group">
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text"><i class="fa fa-envelope"></i></span>
-							</div>
-							<input type="email" class="form-control" placeholder="email">
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text"><i class="fa fa-lock"></i></span>
-							</div>
-							<input type="password" class="form-control" placeholder="contraseña">
-						</div>
-					</div><hr>
-					<!--SUBMIT-->
-					<button class="custom-btn" type="submit">Entrar</button>
-
-
-					<!--ALERTS / LOGIN-->
-
-					<!--Credenciales incorrectas // display none-->
-					<div class="alert alert-danger mt-3 text-center" role="alert" id="error-no-user">
-		  				Credenciales incorrectas.
-					</div>
-					<!--User banned // display none-->
-					<div class="alert alert-danger mt-3 text-center" role="alert" id="error-banned">
-		  				Esta cuenta está bloqueada, para más información contacta con el Administrador.
-					</div>
-				</form>
-			</div>
-
-			<!--Collapse / REGISTRO-->
-			<div class="collapse" id="register">
-				<div id="formulario">
-					<form id="form-submit">
-						<!--Nombre-->
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-user"></i></span>
+					<!--Login / register-->
+					<!--<div class="col-lg-6 col-md-12 col-sm-12">-->
+					<div class="col-lg-12">
+						<div class="row">
+							<div id="form-container">
+								<div class="form-group p-2 mt-3">
+									<button class="custom-btn" type="button" data-toggle="collapse" data-target="#login">Login</button>
 								</div>
-								<input type="text" class="form-control" placeholder="nick" id="reg-nick">
+								<div class="form-group p-2 mt-3">
+									<button class="custom-btn" type="button" data-toggle="collapse" data-target="#register">Registro</button>
+								</div>
 							</div>
 						</div>
-						<!--email-->
+					</div>
+				</div>
+
+				<!--Collapse / LOGIN-->
+				<div class="collapse mb-5" id="login">
+					<!--Login-->
+					<form id="formulario" action="series.html">
 						<div class="form-group">
 							<div class="input-group">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-envelope"></i></span>
 								</div>
-								<input type="email" class="form-control" placeholder="email" id="reg-email">
+								<input type="email" class="form-control" placeholder="email">
 							</div>
 						</div>
-						<!--password-->
 						<div class="form-group">
 							<div class="input-group">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-lock"></i></span>
 								</div>
-								<input type="password" class="form-control" id="reg-first-pwd" placeholder="contraseña">
+								<input type="password" class="form-control" placeholder="contraseña">
 							</div>
+						</div><hr>
+						<!--SUBMIT-->
+						<button class="custom-btn" type="submit">Entrar</button>
+
+
+						<!--ALERTS / LOGIN-->
+
+						<!--Credenciales incorrectas // display none-->
+						<div class="alert alert-danger mt-3 text-center" role="alert" id="error-no-user">
+			  				Credenciales incorrectas.
 						</div>
-						<!--repeat password-->
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-lock"></i></span>
-								</div>
-								<input type="password" class="form-control" id="reg-second-pwd" placeholder="repetir contraseña">
-							</div>
+						<!--User banned // display none-->
+						<div class="alert alert-danger mt-3 text-center" role="alert" id="error-banned">
+			  				Esta cuenta está bloqueada, para más información contacta con el Administrador.
 						</div>
 					</form>
-					<hr>
-					<!--SUBMIT-->
-					<button class="custom-btn mb-5" type="submit" id="register-btn">Registrar</button>
+				</div>
+
+				<!--Collapse / REGISTRO-->
+				<div class="collapse" id="register">
+					<div id="formulario">
+						<form id="form-submit">
+							<!--Nombre-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-user"></i></span>
+									</div>
+									<input type="text" class="form-control" placeholder="nick" id="reg-nick">
+								</div>
+							</div>
+							<!--email-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-envelope"></i></span>
+									</div>
+									<input type="email" class="form-control" placeholder="email" id="reg-email">
+								</div>
+							</div>
+							<!--password-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-lock"></i></span>
+									</div>
+									<input type="password" class="form-control" id="reg-first-pwd" placeholder="contraseña">
+								</div>
+							</div>
+							<!--repeat password-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-lock"></i></span>
+									</div>
+									<input type="password" class="form-control" id="reg-second-pwd" placeholder="repetir contraseña">
+								</div>
+							</div>
+						</form>
+						<hr>
+						<!--SUBMIT-->
+						<button class="custom-btn mb-5" type="submit" id="register-btn">Registrar</button>
 
 
-					<!--ALERTS / LOGIN-->
+						<!--ALERTS / LOGIN-->
 
-					<!--Error de registro // display none-->
-					<div class="alert alert-danger text-center" role="alert" id="reg-error">
-		  				Ha ocurrido un error, revisa los campos del formulario.
-					</div>
-					<!--Registro exitoso// display none-->
-					<div class="alert alert-dark text-center" role="alert" id="reg-success">
-		  				El usuario ha sido registrado exitosamente.
+						<!--Error de registro // display none-->
+						<div class="alert alert-danger text-center" role="alert" id="reg-error">
+			  				Ha ocurrido un error, revisa los campos del formulario.
+						</div>
+						<!--Registro exitoso// display none-->
+						<div class="alert alert-dark text-center" role="alert" id="reg-success">
+			  				El usuario ha sido registrado exitosamente.
+						</div>
 					</div>
 				</div>
-			</div>
 
+			</div>
 		</div>
 
 	    <!--Scripts de bootstrap-->

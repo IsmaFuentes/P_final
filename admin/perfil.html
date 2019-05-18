@@ -14,153 +14,158 @@
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
 
-	<body id="user_body">
-		<!--Navbar-->
-		<nav class="navbar navbar-expand-md">
-			<span id="nav_logo" class="navbar-brand"></span>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
-				<i class="fa fa-bars" id="menu-ico"></i>
-			</button>
-			<!--izquierda-->
-			<div class="collapse navbar-collapse" id="nav-content">
-				<a href="../series.html" class="custom-link">Home</a>
-				<!--Usuario // dropdown-->
-				<div class="dropdown ml-auto">
-					<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<img class="rounded-circle ml-auto user-img" src="../img/user.png" alt="user-img">
-				  		<span class="caret"></span>
-					</button>
-				  	<div class="dropdown-menu dropdown-menu-right">
-				    	<a class="dropdown-item" href="perfil.html">Perfil</a>
-				    	<a class="dropdown-item" href="usuarios.html">Administrar usuarios</a>
-				    	<a class="dropdown-item" href="contenido.html">Añadir contenido</a>
-				    	<div class="dropdown-divider"></div>
-				    	<a class="dropdown-item" href="../index.html">Cerrar sesión</a>
-				  	</div>
+	<body>
+
+		<div id="body">
+			
+			<!--Navbar-->
+			<nav class="navbar navbar-expand-md">
+				<span id="nav_logo" class="navbar-brand"></span>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
+					<i class="fa fa-bars" id="menu-ico"></i>
+				</button>
+				<!--izquierda-->
+				<div class="collapse navbar-collapse" id="nav-content">
+					<a href="../series.html" class="custom-link">Home</a>
+					<!--Usuario // dropdown-->
+					<div class="dropdown ml-auto">
+						<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img class="rounded-circle ml-auto user-img" src="../img/user.png" alt="user-img">
+					  		<span class="caret"></span>
+						</button>
+					  	<div class="dropdown-menu dropdown-menu-right">
+					    	<a class="dropdown-item" href="perfil.html">Perfil</a>
+					    	<a class="dropdown-item" href="usuarios.html">Administrar usuarios</a>
+					    	<a class="dropdown-item" href="contenido.html">Añadir contenido</a>
+					    	<div class="dropdown-divider"></div>
+					    	<a class="dropdown-item" href="../index.html">Cerrar sesión</a>
+					  	</div>
+					</div>
+				</div>
+			</nav>
+
+			<!--Contenedor principal-->
+			<div class="container-fluid mt-4">
+				<!--Cabecera-->
+		        <div class="table-title">
+		            <div class="row">
+		                <div class="col-6">
+							<h2>Perfil</h2>
+						</div>
+						<div class="col-6">
+							<!--Boton editar-->
+							<div class="float-right mt-1">
+								<button class="custom-btn" data-toggle="modal" data-target="#nuevo-usuario" id="user-edit">Editar</button>	
+				        		<!--Guardar cambios-->
+				        		<button class="custom-btn" id="changes-save" style="display:none;">Guardar</button>
+							</div>			
+						</div>
+		            </div>
+		        </div>
+			    <!--ALERTS-->
+			    <div class="alert alert-warning mt-2" id="alert-changes-success">
+			        Cambios realizados con éxito.
+			    </div>
+
+			    <div class="alert alert-danger mt-2" id="alert-changes-error">
+			        Los datos no son válidos.
+			    </div>
+
+		        <!--DATOS DEL USUARIO-->
+		        <div id="perfil" class="mt-3">
+		        	<!--Foto usuario-->
+		        	<div class="text-center pt-5">
+			        	<img src="../img/mrbean2.jpg" class="rounded-circle profile-img" id="img-container">
+			        	<br>
+			        	<!--Cambiar imágen de perfil-->
+						<label for="btn-profile-img" class="custom-btn mt-2" id="upload-btn">
+							<i class="fa fa-images"></i> Sube otra foto
+						</label>
+			        	<input type="file" name="profile" id="btn-profile-img">
+		        	</div>
+		        	<!--Datos del usuario-->
+		        	<div class="" id="profile-data"><hr>
+		        		<form>
+			        		<!--Nombre de usuario-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-user"></i></span>
+									</div>
+									<input type="text" name="" value="username" class="form-control" id="nickname" disabled>
+								</div>
+							</div>
+			        		<!--Email-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-envelope"></i></span>
+									</div>
+									<input type="text" name="" value="username@gmail.com" id="email" class="form-control" disabled>
+								</div>
+							</div>
+			        		<!--Role-->
+							<div class="form-group" style="width:200px">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-users-cog"></i></span>
+									</div>
+									<input type="text" name="" value="Administrador" id="role" class="form-control" disabled>
+								</div>
+							</div>
+			        		<!--Descripción-->
+			        		<span class="badge badge-light">Sobre mí</span>
+			        		<textarea class="form-control" rows="3" id="aboutme" class="form-control" disabled>Breve descripción</textarea><br>
+		        		</form>
+			        	<!--Cambiar contraseña / MODAL-->
+			        	<button class="custom-btn mb-4" data-toggle="modal" data-target="#change-password">Cambiar contraseña</button>
+		        	</div>
+		        </div>
+			<!--Final del contenedor-->
+			</div>
+
+			<!--Modal cambiar contraseña-->
+			<div class="modal fade" id="change-password" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+			        		<h5 class="modal-title" id="exampleModalLabel">Cambiar contraseña</h5>
+			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          			<span aria-hidden="true">&times;</span>
+			        		</button>
+			      		</div>
+			      		<div class="modal-body">
+			        		<input type="password" name="" id="first-pwd" placeholder="contraseña" class="form-control"><br>
+			        		<input type="password" name="" id="second-pwd" placeholder="repite la contraseña" class="form-control"><br>
+			        		<!--submit-->
+			        		<button type="submit" class="custom-btn" id="save-password">Guardar</button>
+			      		</div>
+			      		<div class="modal-footer">
+			        		<button class="custom-danger" data-dismiss="modal">Cerrar</button>
+			      		</div>
+			    	</div>
+			    	<!--ALERTS / CAMBIO CONTRASEÑA-->
+					<div class="alert alert-warning text-center mt-3" id="alert-psw-success">
+					    La contraseña se ha cambiado.
+					</div>
+					<div class="alert alert-danger text-center mt-3" id="alert-psw-error">
+					    Las contraseñas no coinciden.
+					</div>
+			  	</div>
+			</div>
+
+			<!--footer-->
+			<div id="footer" class="mt-5">
+				<div class="container-fluid text-center">
+					<img src="../img/logo.png" width="200px" class="mb-2">
+					<br>
+					<i class="fab fa-facebook-square fa-2x"></i>
+					<i class="fab fa-instagram fa-2x"></i>
+					<i class="fab fa-twitter-square fa-2x"></i>
 				</div>
 			</div>
-		</nav>
 
-		<!--Contenedor principal-->
-		<div class="container-fluid mt-4">
-			<!--Cabecera-->
-	        <div class="table-title">
-	            <div class="row">
-	                <div class="col-6">
-						<h2>Perfil</h2>
-					</div>
-					<div class="col-6">
-						<!--Boton editar-->
-						<div class="float-right mt-1">
-							<button class="custom-btn" data-toggle="modal" data-target="#nuevo-usuario" id="user-edit">Editar</button>	
-			        		<!--Guardar cambios-->
-			        		<button class="custom-btn" id="changes-save" style="display:none;">Guardar</button>
-						</div>			
-					</div>
-	            </div>
-	        </div>
-		    <!--ALERTS-->
-		    <div class="alert alert-warning mt-2" id="alert-changes-success">
-		        Cambios realizados con éxito.
-		    </div>
-
-		    <div class="alert alert-danger mt-2" id="alert-changes-error">
-		        Ha ocurrido un problema validando los datos.
-		    </div>
-
-	        <!--DATOS DEL USUARIO-->
-	        <div id="perfil" class="mt-3">
-	        	<!--Foto usuario-->
-	        	<div class="text-center pt-5">
-		        	<img src="../img/mrbean2.jpg" class="rounded-circle profile-img" id="img-container">
-		        	<br>
-		        	<!--Cambiar imágen de perfil-->
-					<label for="btn-profile-img" class="custom-btn mt-2" id="upload-btn">
-						<i class="fa fa-images"></i> Sube otra foto
-					</label>
-		        	<input type="file" name="profile" id="btn-profile-img">
-	        	</div>
-	        	<!--Datos del usuario-->
-	        	<div class="" id="profile-data"><hr>
-	        		<form>
-		        		<!--Nombre de usuario-->
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-user"></i></span>
-								</div>
-								<input type="text" name="" value="username" class="form-control" id="nickname" disabled>
-							</div>
-						</div>
-		        		<!--Email-->
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-envelope"></i></span>
-								</div>
-								<input type="text" name="" value="username@gmail.com" id="email" class="form-control" disabled>
-							</div>
-						</div>
-		        		<!--Role-->
-						<div class="form-group" style="width:200px">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-users-cog"></i></span>
-								</div>
-								<input type="text" name="" value="Administrador" id="role" class="form-control" disabled>
-							</div>
-						</div>
-		        		<!--Descripción-->
-		        		<span class="badge badge-light">Sobre mí</span>
-		        		<textarea class="form-control" rows="3" id="aboutme" class="form-control" disabled>Breve descripción</textarea><br>
-	        		</form>
-		        	<!--Cambiar contraseña / MODAL-->
-		        	<button class="custom-btn mb-4" data-toggle="modal" data-target="#change-password">Cambiar contraseña</button>
-	        	</div>
-	        </div>
-		<!--Final del contenedor-->
-		</div>
-
-		<!--Modal cambiar contraseña-->
-		<div class="modal fade" id="change-password" tabindex="-1" role="dialog">
-			<div class="modal-dialog" role="document">
-		    	<div class="modal-content">
-		      		<div class="modal-header">
-		        		<h5 class="modal-title" id="exampleModalLabel">Cambiar contraseña</h5>
-		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          			<span aria-hidden="true">&times;</span>
-		        		</button>
-		      		</div>
-		      		<div class="modal-body">
-		        		<input type="password" name="" id="first-pwd" placeholder="contraseña" class="form-control"><br>
-		        		<input type="password" name="" id="second-pwd" placeholder="repite la contraseña" class="form-control"><br>
-		        		<!--submit-->
-		        		<button type="submit" class="custom-btn" id="save-password">Guardar</button>
-		      		</div>
-		      		<div class="modal-footer">
-		        		<button class="custom-danger" data-dismiss="modal">Cerrar</button>
-		      		</div>
-		    	</div>
-		  	</div>
-		    <!--ALERTS / CAMBIO CONTRASEÑA-->
-			<div class="alert alert-warning text-center" id="alert-psw-success">
-			    La contraseña se ha cambiado.
-			</div>
-
-			<div class="alert alert-danger text-center" id="alert-psw-error">
-			    Las contraseñas no coinciden.
-			</div>
-		</div>
-
-		<!--footer-->
-		<div id="footer" class="mt-5">
-			<div class="container-fluid text-center">
-				<img src="../img/logo.png" width="200px" class="mb-2">
-				<br>
-				<i class="fab fa-facebook-square fa-2x"></i>
-				<i class="fab fa-instagram fa-2x"></i>
-				<i class="fab fa-twitter-square fa-2x"></i>
-			</div>
+		<!--End body-->
 		</div>
 
 	    <!--Scripts de bootstrap-->
