@@ -76,6 +76,15 @@
 									<input type="text" class="form-control" placeholder="Título" id="film-name">
 								</div>
 							</div>
+							<!--Descripción-->
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-pen"></i></span>
+									</div>
+									<textarea class="form-control" placeholder="Descripción" rows="4" id="film-desc"></textarea>
+								</div>
+							</div>
 							<!--Duración-->
 							<div class="form-group">
 								<div class="input-group">
@@ -85,22 +94,13 @@
 									<input type="number" class="form-control" placeholder="Duración (Min)" id="film-duration">
 								</div>
 							</div>
-							<!--Descripción-->
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fa fa-pen"></i></span>
-									</div>
-									<textarea class="form-control" placeholder="Descripción" rows="4"></textarea>
-								</div>
-							</div>
 							<!--Género-->
 							<div class="form-group">
 								<div class="input-group">
 									<div class="input-group-prepend">
 										<span class="input-group-text"><i class="fa fa-film"></i></span>
 									</div>
-									<select multiple class="form-control">
+									<select multiple class="form-control"  id="film-genre">
 										<option value="terror">Terror</option>
 									  	<option value="comedia">Comédia</option>
 									  	<option value="drama">Drama</option>
@@ -110,19 +110,19 @@
 									</select>
 								</div>
 							</div>
-				       		<!--RATING-->
-				       		<div class="form-group mt-2">
-				       			<div class="input-group">
+							<!--Tráiler-->
+							<div class="form-group">
+								<div class="input-group">
 									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fas fa-star-half-alt"></i></span>
+										<span class="input-group-text"><i class="fab fa-youtube"></i></span>
 									</div>
-									<input type="number" class="form-control" placeholder="Puntuación (1-5)" id="film-rating">
-				       			</div>
-				       		</div>
+									<input type="text" class="form-control" placeholder="Tráiler" id="film-trailer">
+								</div>
+							</div>
 						</form>
 						<!--SUBMIT-->
 						<div class="mt-2 mb-3">
-							<button class="custom-btn" id="film-save">Guardar</button>
+							<button class="custom-btn" id="film-save">Guardar</button><hr>
 						</div>
 					</div>
 
@@ -153,22 +153,22 @@
 									<input type="text" class="form-control" placeholder="Título" id="serie-name">
 								</div>
 							</div>
-							<!--Duración-->
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fa fa-clock"></i></span>
-									</div>
-									<input type="number" class="form-control" placeholder="Duración (Min)" id="serie-duration">
-								</div>
-							</div>
 							<!--Descripción-->
 							<div class="form-group">
 								<div class="input-group">
 									<div class="input-group-prepend">
 										<span class="input-group-text"><i class="fa fa-pen"></i></span>
 									</div>
-									<textarea class="form-control" placeholder="Descripción" rows="4"></textarea>
+									<textarea class="form-control" placeholder="Descripción" rows="4" id="serie-desc"></textarea>
+								</div>
+							</div>
+							<!--Capítulos-->
+							<div class="form-group mt-2">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-list-ol"></i></span>
+									</div>
+									<input type="number" class="form-control" placeholder="Temporadas" id="serie-seasons">
 								</div>
 							</div>
 							<!--Género-->
@@ -177,7 +177,7 @@
 									<div class="input-group-prepend">
 										<span class="input-group-text"><i class="fa fa-film"></i></span>
 									</div>
-									<select multiple class="form-control">
+									<select multiple class="form-control" id="serie-genre">
 										<option value="terror">Terror</option>
 									  	<option value="comedia">Comédia</option>
 									  	<option value="drama">Drama</option>
@@ -187,26 +187,106 @@
 									</select>
 								</div>
 							</div>
-				       		<!--RATING-->
-				       		<div class="form-group mt-2">
-				       			<div class="input-group">
+							<!--Tráiler-->
+							<div class="form-group">
+								<div class="input-group">
 									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fas fa-star-half-alt"></i></span>
+										<span class="input-group-text"><i class="fab fa-youtube"></i></span>
 									</div>
-									<input type="number" class="form-control" placeholder="Puntuación (1-5)" id="serie-rating">
-				       			</div>
-				       		</div>
+									<input type="text" class="form-control" placeholder="Tráiler" id="serie-trailer">
+								</div>
+							</div>
 						</form>
 						<!--SUBMIT-->
 						<div class="mt-2 mb-3">
 							<button class="custom-btn" id="serie-save">Guardar</button>
+							<button class="custom-btn" id="chapters" data-toggle="modal" data-target="#new-chapter">Añadir capítulo</button><hr>
 						</div>
 					</div>
 				</div>
-
-
 			<!--Final del contenedor-->
 			</div>
+
+			<!--Ventanas modales-->
+
+			<!--Nuevo capítulo-->
+			<div class="modal fade" id="new-chapter" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+			        		<h5 class="modal-title" id="modal-label">Nuevo Capítulo</h5>
+			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          			<span aria-hidden="true">&times;</span>
+			        		</button>
+			      		</div>
+			      		<div class="modal-body">
+			      			<!--Form-->
+			        		<form id="#crear-usuario">
+								<!--Título-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fa fa-film"></i></span>
+										</div>
+										<input type="text" class="form-control" placeholder="Título">
+									</div>
+								</div>
+								<!--Serie-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fas fa-list-ol"></i></span>
+										</div>
+										<select class="form-control" id="chapter-from-serie">
+											<option value="null" disabled selected>Serie</option>
+											<option value="serie1">Juego de tronos</option>
+										  	<option value="serie2">Vikings</option>
+										  	<option value="serie3">The walking dead</option>
+										</select>
+									</div>
+								</div>
+								<!--Temporada-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fas fa-list-ol"></i></span>
+										</div>
+										<select class="form-control" id="chapter-in-season">
+											<option value="null" disabled selected>Temporada</option>
+											<option value="temp1">Temporada 1</option>
+										  	<option value="temp2">Temporada 2</option>
+										  	<option value="temp3">Temporada 3</option>
+										</select>
+									</div>
+								</div>
+								<!--Descripción-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fa fa-pen"></i></span>
+										</div>
+										<textarea class="form-control" placeholder="Descripción" rows="4" id="chapter-desc"></textarea>
+									</div>
+								</div>
+								<!--Duración-->
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fa fa-clock"></i></span>
+										</div>
+										<input type="number" class="form-control" placeholder="Duración (Min)" id="chapter-duration">
+									</div>
+								</div>
+			        		</form>
+			      		</div>
+			      		<div class="modal-footer">
+			      			<button type="button" class="custom-btn">Crear</button>
+			        		<button type="button" class="custom-danger" data-dismiss="modal">Cancelar</button>
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+
 
 		<!--End body-->
 		</div>
