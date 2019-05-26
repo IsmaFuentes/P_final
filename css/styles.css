@@ -506,3 +506,7 @@ input[type="file"] {
 .follow-btn:focus{
 	outline: none;
 }
+
+.size-small{
+	font-size: 11px;
+}
