@@ -9,3 +9,6 @@ Validación de formulario con JQuery
 
 - https://raw.githack.com/IsmaFuentes/P_final/master/index.html (login)
 - https://raw.githack.com/IsmaFuentes/P_final/master/series.html (pagina)
+
+Link de la APP
+- http://dbfilms.herokuapp.com/
