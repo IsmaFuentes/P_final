@@ -25,6 +25,12 @@
 	outline: none;
 }
 
+.like{
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
 .input-group-text{
 	background-color: #F5A754;
 	border: #F7BC7C;
