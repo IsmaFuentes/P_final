@@ -14,3 +14,4 @@ Link de la APP:
 - http://dbfilms.herokuapp.com/
 
 El backend está hecho con Laravel, y lo demás con Angular, HTML y Bootstrap
+- https://github.com/alexgaya/dbfilms-laravel
