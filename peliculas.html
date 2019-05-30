@@ -1,381 +1,450 @@
-﻿<!DOCTYPE html>
-<html>
-	<head>
-		<title>Peliculas</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!--Bootstrap CSS-->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
-		<!--Font awesome-->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-		<!--Main CSS-->
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
-		<!--Google fonts-->
-		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-		<!--Favicon-->
-		<link rel="icon" href="img/dbfilms.ico" type="image/x-icon">
-	</head>
+			<!DOCTYPE html>
+			<html>
+				<head>
+					<title>Peliculas</title>
+					<meta charset="utf-8">
+					<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					<!--Bootstrap CSS-->
+					<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+					<!--Font awesome-->
+					<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+					<!--Main CSS-->
+					<link rel="stylesheet" type="text/css" href="css/styles.css">
+					<!--Google fonts-->
+					<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+					<!--Favicon-->
+					<link rel="icon" href="img/dbfilms.ico" type="image/x-icon">
+				</head>
 
-	<body>
+				<body>
 
-		<div id="body">
+					<div id="body">
 
-			<!--Navbar-->
-			<nav class="navbar navbar-expand-md">
-				<span id="nav_logo" class="navbar-brand"></span>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
-					<i class="fa fa-bars" id="menu-ico"></i>
-				</button>
-				<!--izquierda-->
-				<div class="collapse navbar-collapse" id="nav-content">
-					<a href="series.html" class="custom-link">series</a>
-					<a href="peliculas.html" class="custom-link current-active">peliculas</a>
-					<a href="listas.html" class="custom-link">listas</a>
-					<!--Usuario // dropdown-->
-					<div class="dropdown ml-auto">
-						<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<img class="rounded-circle ml-auto user-img" src="img/user.png" alt="user-img">
-					  		<span class="caret"></span>
-						</button>
-					  	<div class="dropdown-menu dropdown-menu-right">
-					    	<a class="dropdown-item" href="admin/perfil.html">Perfil</a>
-					    	<a class="dropdown-item" href="admin/usuarios.html">Administrar usuarios</a>
-					    	<a class="dropdown-item" href="admin/contenido.html">Añadir contenido</a>
-					    	<div class="dropdown-divider"></div>
-					    	<a class="dropdown-item" href="index.html">Cerrar sesión</a>
-					  	</div>
-					</div>
-				</div>
-			</nav>
-
-			<div class="container-fluid mt-4">
-
-				<!--header-->
-	            <div class="card-header orange">
-	                <ul class="nav nav-tabs card-header-tabs">
-	                    <li class="nav-item">
-	                        <a href="#" class="active-link activo">Nuevas</a>
-	                    </li>
-	                    <li class="nav-item">
-	                        <a href="#" class="custom-link">Vistas</a>
-	                    </li>
-	                    <li class="nav-item">
-	                        <a href="#" class="custom-link">Todas</a>
-	                    </li>
-	                    <li class="nav-item">
-	                        <a href="#" class="custom-link"><i class="fa fa-thumbs-up"></i></a>
-	                    </li>
-	                    <li class="nav-item" id="hidden">
-	                        <button type="button" class="custom-link" data-toggle="modal" data-target="#modalfiltros">
-	                        	<i class="fa fa-filter"></i>
-	                    	</button>
-	                    </li>
-	                </ul>
-	            </div>
-
-	            <!--Ventana modal-->
-	            <div class="modal fade" id="modalfiltros">
-				  <div class="modal-dialog modal-dialog-centered" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="exampleModalLongTitle">Filtros</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				      <!--Filtros-->
-						<div class="col-12">
-							<!--panel 1-->
-							<div class="card mt-2">
-						    	<div class="card-header">Filtrar por duración</div>
-						    	<div class="card-body">
-						    		<input type="text" name="" class="form-control">
-						    	</div>
-							</div>
-							<!--panel 2-->
-							<div class="card mt-2">
-						    	<div class="card-header">Filtrar por año</div>
-						    	<div class="card-body">
-									<select class="form-control">
-									  <option>2019</option>
-									  <option>2018</option>
-									  <option>2017</option>
-									</select>
-						    	</div>
-							</div>
-							<!--panel 2-->
-							<div class="card mt-2">
-						    	<div class="card-header">Filtrar por nombre</div>
-						    	<div class="card-body">
-						    		<input type="text" name="" class="form-control">
-						    	</div>
-							</div>
-							<!--APLICAR FILTROS-->
-							<button class="custom-btn mt-2" id="apply-filters-modal">Aplicar filtros</button>
-						</div>
-						<!---->
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="custom-btn" data-dismiss="modal">cerrar</button>
-				      </div>
-				    </div>
-				  </div>
-	            </div>
-
-	            <div class="container-fluid">
-		            <!--contents-->
-					<div class="row">
-						<!--columna 1-->
-						<div class="col-lg-8 col-sm-12">
-
-							<!--Fila de peliculas 1-->
-							<div class="row mt-4">
-
-								<div class="col-sm-6 col-lg-3 mb-2 ">
-									<button class="custom-btn like"><i class="fa fa-thumbs-up"></i></button>
-									<button class="custom-btn view"><i class="fas fa-eye-slash"></i></button>
-                                    <!--Modal añadir lista-->
-                                    <button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>
-	                                <a href="items/pelicula.html" class="text-decoration-none">
-	                                    <img src="img/venom.jpg" class="custom-img" alt="img película">
-	                                </a>
-	                                <div class="film-footer">
-	                                	<p class="pt-1 film-text">Venom</p>
-	                            	</div>
+						<!--Navbar-->
+						<nav class="navbar navbar-expand-md">
+							<span id="nav_logo" class="navbar-brand"></span>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
+								<i class="fa fa-bars" id="menu-ico"></i>
+							</button>
+							<!--izquierda-->
+							<div class="collapse navbar-collapse" id="nav-content">
+								<a href="series.html" class="custom-link">series</a>
+								<a href="peliculas.html" class="custom-link current-active">peliculas</a>
+								<a href="listas.html" class="custom-link">listas</a>
+								<!--Usuario // dropdown-->
+								<div class="dropdown ml-auto">
+									<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<img class="rounded-circle ml-auto user-img" src="img/user.png" alt="user-img">
+								  		<span class="caret"></span>
+									</button>
+								  	<div class="dropdown-menu dropdown-menu-right">
+								    	<a class="dropdown-item" href="admin/perfil.html">Perfil</a>
+								    	<a class="dropdown-item" href="admin/usuarios.html">Administrar usuarios</a>
+								    	<a class="dropdown-item" href="admin/contenido.html">Añadir contenido</a>
+								    	<div class="dropdown-divider"></div>
+								    	<a class="dropdown-item" href="index.html">Cerrar sesión</a>
+								  	</div>
 								</div>
+							</div>
+						</nav>
 
-                                <div class="col-sm-6 col-lg-3 mb-2">
-                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
-                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
-                                    <!--Modal añadir lista-->
-                                    <button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>
-                                    <a href="items/pelicula.html" class="text-decoration-none">
-                                        <img src="img/deadpool.jpg" class="custom-img" alt="img película">
-                                    </a>
-                                    <div class="film-footer">
-                                        <p class="pt-1 film-text">Deadpool 2</p>
-                                    </div>
-                                </div>
+						<div class="container-fluid mt-4">
 
-                                <div class="col-sm-6 col-lg-3 mb-2">
-                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
-                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
-                                    <!--Modal añadir lista-->
-                                    <button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>
-                                    <a href="items/pelicula.html" class="text-decoration-none">
-                                        <img src="img/camerica.jpg" class="custom-img" alt="img película">
-                                    </a>
-                                    <div class="film-footer">
-                                        <p class="pt-1 film-text">Capitán America</p>
-                                    </div>
-                                </div>
+							<!--header-->
+				            <div class="card-header orange">
+				                <ul class="nav nav-tabs card-header-tabs">
+				                    <li class="nav-item">
+				                        <a href="#" class="active-link activo">Nuevas</a>
+				                    </li>
+				                    <li class="nav-item">
+				                        <a href="#" class="custom-link">Vistas</a>
+				                    </li>
+				                    <li class="nav-item">
+				                        <a href="#" class="custom-link">Todas</a>
+				                    </li>
+				                    <li class="nav-item">
+				                        <a href="#" class="custom-link"><i class="fa fa-thumbs-up"></i></a>
+				                    </li>
+				                    <li class="nav-item" id="hidden">
+				                        <button type="button" class="custom-link" data-toggle="modal" data-target="#modalfiltros">
+				                        	<i class="fa fa-filter"></i>
+				                    	</button>
+				                    </li>
+				                </ul>
+				            </div>
 
-                                <div class="col-sm-6 col-lg-3 mb-2">
-                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
-                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
-                                    <!--Modal añadir lista-->
-                                    <button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>
-                                    <a href="items/pelicula.html" class="text-decoration-none">
-                                        <img src="img/spiderman.png" class="custom-img" alt="img película">
-                                    </a>
-                                    <div class="film-footer">
-                                        <p class="pt-1 film-text">Spiderman</p>
-                                    </div>
-                                </div>
+				            <!--Ventana modal-->
+				            <div class="modal fade" id="modalfiltros">
+							  <div class="modal-dialog modal-dialog-centered" role="document">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <h5 class="modal-title" id="exampleModalLongTitle">Filtros</h5>
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          <span aria-hidden="true">&times;</span>
+							        </button>
+							      </div>
+							      <div class="modal-body">
+							      <!--Filtros-->
+									<div class="col-12">
+										<!--panel 1-->
+										<div class="card mt-2">
+									    	<div class="card-header">Filtrar por duración</div>
+									    	<div class="card-body">
+									    		<input type="text" name="" class="form-control">
+									    	</div>
+										</div>
+										<!--panel 2-->
+										<div class="card mt-2">
+									    	<div class="card-header">Filtrar por año</div>
+									    	<div class="card-body">
+												<select class="form-control">
+												  <option>2019</option>
+												  <option>2018</option>
+												  <option>2017</option>
+												</select>
+									    	</div>
+										</div>
+										<!--panel 2-->
+										<div class="card mt-2">
+									    	<div class="card-header">Filtrar por nombre</div>
+									    	<div class="card-body">
+									    		<input type="text" name="" class="form-control">
+									    	</div>
+										</div>
+										<!--APLICAR FILTROS-->
+										<button class="custom-btn mt-2" id="apply-filters-modal">Aplicar filtros</button>
+									</div>
+									<!---->
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="custom-btn" data-dismiss="modal">cerrar</button>
+							      </div>
+							    </div>
+							  </div>
+				            </div>
+
+				            <div class="container-fluid">
+					            <!--contents-->
+								<div class="row">
+									<!--columna 1-->
+									<div class="col-lg-8 col-sm-12">
+
+										<!--Fila de peliculas 1-->
+										<div class="row mt-4">
+
+											<div class="col-sm-6 col-lg-3 mb-2 ">
+												<button class="custom-btn like"><i class="fa fa-thumbs-up"></i></button>
+												<button class="custom-btn view"><i class="fas fa-eye-slash"></i></button>
+			                                    <!--Modal añadir lista-->
+			                                   	<!--<button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>-->
+												<div class="dropdown show">
+													<button class="custom-btn add-list" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus"></i>
+													</button>
+														<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+														<a class="dropdown-item" href="#">List 01</a>
+														<a class="dropdown-item" href="#">List 02</a>
+														<a class="dropdown-item" data-toggle="modal" data-target="#add-in-list" href="#">New List</a>
+														</div>
+													</div>
+				                                <a href="items/pelicula.html" class="text-decoration-none">
+				                                    <img src="img/venom.jpg" class="custom-img" alt="img película">
+				                                </a>
+				                                <div class="film-footer">
+				                                	<p class="pt-1 film-text">Venom</p>
+				                            	</div>
+											</div>
+
+			                                <div class="col-sm-6 col-lg-3 mb-2">
+			                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
+			                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
+			                                    <!--Modal añadir lista-->
+			                                    <!--<button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>-->
+												<div class="dropdown show">
+													<button class="custom-btn add-list" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus"></i>
+													</button>
+														<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+														<a class="dropdown-item" href="#">List 01</a>
+														<a class="dropdown-item" href="#">List 02</a>
+														<a class="dropdown-item" data-toggle="modal" data-target="#add-in-list" href="#">New List</a>
+														</div>
+													</div>
+			                                    <a href="items/pelicula.html" class="text-decoration-none">
+			                                        <img src="img/deadpool.jpg" class="custom-img" alt="img película">
+			                                    </a>
+			                                    <div class="film-footer">
+			                                        <p class="pt-1 film-text">Deadpool 2</p>
+			                                    </div>
+			                                </div>
+
+			                                <div class="col-sm-6 col-lg-3 mb-2">
+			                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
+			                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
+			                                    <!--Modal añadir lista-->
+			                                    <!--<button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>-->
+												<div class="dropdown show">
+													<button class="custom-btn add-list" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus"></i>
+													</button>
+														<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+														<a class="dropdown-item" href="#">List 01</a>
+														<a class="dropdown-item" href="#">List 02</a>
+														<a class="dropdown-item" data-toggle="modal" data-target="#add-in-list" href="#">New List</a>
+														</div>
+													</div>
+			                                    <a href="items/pelicula.html" class="text-decoration-none">
+			                                        <img src="img/camerica.jpg" class="custom-img" alt="img película">
+			                                    </a>
+			                                    <div class="film-footer">
+			                                        <p class="pt-1 film-text">Capitán America</p>
+			                                    </div>
+			                                </div>
+
+			                                <div class="col-sm-6 col-lg-3 mb-2">
+			                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
+			                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
+			                                    <!--Modal añadir lista-->
+			                                 	<!--<button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>-->
+												<div class="dropdown show">
+													<button class="custom-btn add-list" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus"></i>
+													</button>
+														<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+														<a class="dropdown-item" href="#">List 01</a>
+														<a class="dropdown-item" href="#">List 02</a>
+														<a class="dropdown-item" data-toggle="modal" data-target="#add-in-list" href="#">New List</a>
+														</div>
+													</div>
+			                                    <a href="items/pelicula.html" class="text-decoration-none">
+			                                        <img src="img/spiderman.png" class="custom-img" alt="img película">
+			                                    </a>
+			                                    <div class="film-footer">
+			                                        <p class="pt-1 film-text">Spiderman</p>
+			                                    </div>
+			                                </div>
+										</div>
+
+										<!--fila de peliculas 2-->
+										<div class="row mt-2">
+
+			                                <div class="col-sm-6 col-lg-3 mb-2 ">
+			                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
+			                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
+			                                    <!--Modal añadir lista-->
+			                                    <!--<button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>-->
+												<div class="dropdown show">
+													<button class="custom-btn add-list" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus"></i>
+													</button>
+														<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+														<a class="dropdown-item" href="#">List 01</a>
+														<a class="dropdown-item" href="#">List 02</a>
+														<a class="dropdown-item" data-toggle="modal" data-target="#add-in-list" href="#">New List</a>
+														</div>
+													</div>
+			                                    <a href="items/pelicula.html" class="text-decoration-none">
+			                                        <img src="img/venom.jpg" class="custom-img" alt="img película">
+			                                    </a>
+			                                    <div class="film-footer">
+			                                        <p class="pt-1 film-text">Venom</p>
+			                                    </div>
+			                                </div>
+
+			                                <div class="col-sm-6 col-lg-3 mb-2">
+			                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
+			                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
+			                                    <!--Modal añadir lista-->
+			                                  	<!--<button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>-->
+												<div class="dropdown show">
+													<button class="custom-btn add-list" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus"></i>
+													</button>
+														<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+														<a class="dropdown-item" href="#">List 01</a>
+														<a class="dropdown-item" href="#">List 02</a>
+														<a class="dropdown-item" data-toggle="modal" data-target="#add-in-list" href="#">New List</a>
+														</div>
+													</div>
+			                                    <a href="items/pelicula.html" class="text-decoration-none">
+			                                        <img src="img/deadpool.jpg" class="custom-img" alt="img película">
+			                                    </a>
+			                                    <div class="film-footer">
+			                                        <p class="pt-1 film-text">Deadpool 2</p>
+			                                    </div>
+			                                </div>
+
+			                                <div class="col-sm-6 col-lg-3 mb-2">
+			                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
+			                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
+			                                    <!--Modal añadir lista-->
+			                                   	<!--<button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>-->
+												<div class="dropdown show">
+													<button class="custom-btn add-list" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus"></i>
+													</button>
+														<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+														<a class="dropdown-item" href="#">List 01</a>
+														<a class="dropdown-item" href="#">List 02</a>
+														<a class="dropdown-item" data-toggle="modal" data-target="#add-in-list" href="#">New List</a>
+														</div>
+													</div>
+			                                    <a href="items/pelicula.html" class="text-decoration-none">
+			                                        <img src="img/camerica.jpg" class="custom-img" alt="img película">
+			                                    </a>
+			                                    <div class="film-footer">
+			                                        <p class="pt-1 film-text">Capitán America</p>
+			                                    </div>
+			                                </div>
+
+			                                <div class="col-sm-6 col-lg-3 mb-2">
+			                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
+			                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
+			                                    <!--Modal añadir lista-->
+			                                 	<!--<button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>-->
+												<div class="dropdown show">
+													<button class="custom-btn add-list" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus"></i>
+													</button>
+														<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+														<a class="dropdown-item" href="#">List 01</a>
+														<a class="dropdown-item" href="#">List 02</a>
+														<a class="dropdown-item" data-toggle="modal" data-target="#add-in-list" href="#">New List</a>
+														</div>
+													</div>
+			                                    <a href="items/pelicula.html" class="text-decoration-none">
+			                                        <img src="img/spiderman.png" class="custom-img" alt="img película">
+			                                    </a>
+			                                    <div class="film-footer">
+			                                        <p class="pt-1 film-text">Spiderman</p>
+			                                    </div>
+			                                </div>
+										</div>
+
+										<!--Paginación-->
+										<nav aria-label="Paginación" class="mt-4">
+										  <ul class="pagination">
+										    <li class="page-item">
+										      <a class="page-link" href="#" aria-label="Previous">
+										        <span aria-hidden="true">&laquo;</span>
+										        <span class="sr-only">atrás</span>
+										      </a>
+										    </li>
+										    <li class="page-item"><a class="page-link" href="#">1</a></li>
+										    <li class="page-item"><a class="page-link" href="#">2</a></li>
+										    <li class="page-item"><a class="page-link" href="#">3</a></li>
+										    <li class="page-item">
+										      <a class="page-link" href="#" aria-label="Next">
+										        <span aria-hidden="true">&raquo;</span>
+										        <span class="sr-only">siguiente</span>
+										      </a>
+										    </li>
+										  </ul>
+										</nav>
+
+									</div>
+
+									<!--columna 2-->
+									<div class="col-4" id="filtros">
+										<!--panel 1-->
+										<div class="card mt-2">
+									    	<div class="card-header">Filtrar por duración</div>
+									    	<div class="card-body">
+									    		<input type="text" name="" class="form-control">
+									    	</div>
+										</div>
+										<!--panel 2-->
+										<div class="card mt-2">
+									    	<div class="card-header">Filtrar por año</div>
+									    	<div class="card-body">
+												<select class="form-control">
+												  <option>2019</option>
+												  <option>2018</option>
+												  <option>2017</option>
+												</select>
+									    	</div>
+										</div>
+										<!--panel 2-->
+										<div class="card mt-2">
+									    	<div class="card-header">Filtrar por nombre</div>
+									    	<div class="card-body">
+									    		<input type="text" name="" class="form-control">
+									    	</div>
+										</div>
+										<!--APLICAR FILTROS-->
+										<button class="custom-btn mt-2" id="apply-filters">Aplicar filtros</button>
+									</div>
+
+								</div>
 							</div>
 
-							<!--fila de peliculas 2-->
-							<div class="row mt-2">
-
-                                <div class="col-sm-6 col-lg-3 mb-2 ">
-                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
-                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
-                                    <!--Modal añadir lista-->
-                                    <button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>
-                                    <a href="items/pelicula.html" class="text-decoration-none">
-                                        <img src="img/venom.jpg" class="custom-img" alt="img película">
-                                    </a>
-                                    <div class="film-footer">
-                                        <p class="pt-1 film-text">Venom</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-lg-3 mb-2">
-                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
-                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
-                                    <!--Modal añadir lista-->
-                                    <button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>
-                                    <a href="items/pelicula.html" class="text-decoration-none">
-                                        <img src="img/deadpool.jpg" class="custom-img" alt="img película">
-                                    </a>
-                                    <div class="film-footer">
-                                        <p class="pt-1 film-text">Deadpool 2</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-lg-3 mb-2">
-                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
-                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
-                                    <!--Modal añadir lista-->
-                                    <button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>
-                                    <a href="items/pelicula.html" class="text-decoration-none">
-                                        <img src="img/camerica.jpg" class="custom-img" alt="img película">
-                                    </a>
-                                    <div class="film-footer">
-                                        <p class="pt-1 film-text">Capitán America</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-lg-3 mb-2">
-                                    <button class="custom-btn float-right like"><i class="fa fa-thumbs-up"></i></button>
-                                    <button class="custom-btn float-right view"><i class="fas fa-eye-slash"></i></button>
-                                    <!--Modal añadir lista-->
-                                    <button class="custom-btn add-list" data-toggle="modal" data-target="#add-in-list"><i class="fa fa-plus"></i></button>
-                                    <a href="items/pelicula.html" class="text-decoration-none">
-                                        <img src="img/spiderman.png" class="custom-img" alt="img película">
-                                    </a>
-                                    <div class="film-footer">
-                                        <p class="pt-1 film-text">Spiderman</p>
-                                    </div>
-                                </div>
-							</div>
-
-							<!--Paginación-->
-							<nav aria-label="Paginación" class="mt-4">
-							  <ul class="pagination">
-							    <li class="page-item">
-							      <a class="page-link" href="#" aria-label="Previous">
-							        <span aria-hidden="true">&laquo;</span>
-							        <span class="sr-only">atrás</span>
-							      </a>
-							    </li>
-							    <li class="page-item"><a class="page-link" href="#">1</a></li>
-							    <li class="page-item"><a class="page-link" href="#">2</a></li>
-							    <li class="page-item"><a class="page-link" href="#">3</a></li>
-							    <li class="page-item">
-							      <a class="page-link" href="#" aria-label="Next">
-							        <span aria-hidden="true">&raquo;</span>
-							        <span class="sr-only">siguiente</span>
-							      </a>
-							    </li>
-							  </ul>
-							</nav>
-
+						<!--Final del contenedor-->
 						</div>
 
-						<!--columna 2-->
-						<div class="col-4" id="filtros">
-							<!--panel 1-->
-							<div class="card mt-2">
-						    	<div class="card-header">Filtrar por duración</div>
-						    	<div class="card-body">
-						    		<input type="text" name="" class="form-control">
-						    	</div>
+			            <!--MODAL AÑADIR A LISTA-->
+			            <div class="modal fade" id="add-in-list" tabindex="-1" role="dialog" aria-labelledby="addtolist" aria-hidden="true">
+			                <div class="modal-dialog modal-lg" role="document">
+			                    <div class="modal-content">
+			                        <div class="modal-header">
+			                            <h5 class="modal-title text-uppercase" id="addtolist">Add new list</h5>
+			                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			                                <span aria-hidden="true">&times;</span>
+			                            </button>
+			                        </div>
+			                        <div class="modal-body">
+			                            <form id="add-to-list">
+			                                <!--Título-
+			                                <div class="form-group mt-2">
+			                                    <div class="input-group">
+			                                        <div class="input-group-prepend">
+			                                            <span class="input-group-text"><i class="fa fa-film"></i></span>
+			                                        </div>
+			                                        <select class="form-control" id="lists">
+			                                            <option selected disabled>selecciona una lista</option>
+			                                            <option value="list1">Lista1</option>
+			                                            <option value="list2">Lista2</option>
+			                                            <option value="list3">Lista3</option>
+			                                        </select>
+			                                    </div>
+			                                    <button class="custom-btn mt-2" type="button">Add to list</button>
+			                                    <button class="custom-btn" type="button" data-toggle="collapse" data-target="#new-list">Create list</button>
+			                                </div>
+			                                <hr>
+			                                <!--Nueva lista-->
+			                                <div class="form-group mt-2" id="new-list">
+			                                    <div class="input-group">
+			                                        <div class="input-group-prepend">
+			                                            <span class="input-group-text"><i class="fa fa-film"></i></span>
+			                                        </div>
+			                                        <input type="text" class="form-control" placeholder="Título" id="list-name">
+			                                    </div>
+			                                    <button class="custom-btn mt-2 border border-light">Create</button>
+			                                </div>
+			                            </form>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+
+						<!--LOADING SCREEN-->
+						<div class="text-center" id="loading-screen">
+							<div class="progress" id="spinner">
+							  <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" id="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
-							<!--panel 2-->
-							<div class="card mt-2">
-						    	<div class="card-header">Filtrar por año</div>
-						    	<div class="card-body">
-									<select class="form-control">
-									  <option>2019</option>
-									  <option>2018</option>
-									  <option>2017</option>
-									</select>
-						    	</div>
-							</div>
-							<!--panel 2-->
-							<div class="card mt-2">
-						    	<div class="card-header">Filtrar por nombre</div>
-						    	<div class="card-body">
-						    		<input type="text" name="" class="form-control">
-						    	</div>
-							</div>
-							<!--APLICAR FILTROS-->
-							<button class="custom-btn mt-2" id="apply-filters">Aplicar filtros</button>
+							<span class="text-white">Aplicando filtros...</span>
 						</div>
 
+						<!--footer-->
+						<div id="footer" class="mt-5">
+							<div class="container-fluid text-center">
+								<img src="img/logo.png" width="200px" class="mb-2">
+								<br>
+								<i class="fab fa-facebook-square fa-2x"></i>
+								<i class="fab fa-instagram fa-2x"></i>
+								<i class="fab fa-twitter-square fa-2x"></i>
+							</div>
+						</div>
+
+					<!--End body-->
 					</div>
-				</div>
 
-			<!--Final del contenedor-->
-			</div>
-
-            <!--MODAL AÑADIR A LISTA-->
-            <div class="modal fade" id="add-in-list" tabindex="-1" role="dialog" aria-labelledby="addtolist" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="addtolist">Añadir a lista</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="add-to-list">
-                                <!--Título-->
-                                <div class="form-group mt-2">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fa fa-film"></i></span>
-                                        </div>
-                                        <select class="form-control" id="lists">
-                                            <option selected disabled>selecciona una lista</option>
-                                            <option value="list1">Lista1</option>
-                                            <option value="list2">Lista2</option>
-                                            <option value="list3">Lista3</option>
-                                        </select>
-                                    </div>
-                                    <button class="custom-btn mt-2" type="button">Add to list</button>
-                                    <button class="custom-btn" type="button" data-toggle="collapse" data-target="#new-list">Create list</button>
-                                </div>
-                                <hr>
-                                <!--Nueva lista-->
-                                <div class="form-group mt-2 collapse" id="new-list">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fa fa-film"></i></span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="Título" id="list-name">
-                                    </div>
-                                    <button class="custom-btn mt-2">Create</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="custom-danger" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-			<!--LOADING SCREEN-->
-			<div class="text-center" id="loading-screen">
-				<div class="progress" id="spinner">
-				  <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" id="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				<span class="text-white">Aplicando filtros...</span>
-			</div>
-
-			<!--footer-->
-			<div id="footer" class="mt-5">
-				<div class="container-fluid text-center">
-					<img src="img/logo.png" width="200px" class="mb-2">
-					<br>
-					<i class="fab fa-facebook-square fa-2x"></i>
-					<i class="fab fa-instagram fa-2x"></i>
-					<i class="fab fa-twitter-square fa-2x"></i>
-				</div>
-			</div>
-
-		<!--End body-->
-		</div>
-
-	    <!--Scripts de bootstrap-->
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-	    <!--Main js-->
-		<script type="text/javascript" src="js/js.js"></script>
-	</body>
-</html>
+				    <!--Scripts de bootstrap-->
+					<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+					<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+				    <!--Main js-->
+					<script type="text/javascript" src="js/js.js"></script>
+				</body>
+			</html>
