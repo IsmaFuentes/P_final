@@ -184,7 +184,7 @@
 	color: black;
 }
 
-#hidden{
+.hidden{
 	display: none;
 }
 
@@ -216,7 +216,7 @@
 	#filtros{
 		display: none;
 	}
-	#hidden{
+	.hidden{
 		display: block;
 	}
 }

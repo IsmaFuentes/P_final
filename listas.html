@@ -60,12 +60,12 @@
 	                        <a href="#" class="custom-link">Vistas</a>
 	                    </li>
 	                    <li class="nav-item">
-	                        <a href="#" class="custom-link">Todas</a>
+	                        <a href="#user-lists-modal" class="custom-link hidden" data-toggle="modal" data-target="#user-lists-modal">Mis listas</a>
 	                    </li>
 	                    <li class="nav-item">
 	                        <a href="#" class="custom-link"><i class="fa fa-thumbs-up"></i></a>
 	                    </li>
-	                    <li class="nav-item" id="hidden">
+	                    <li class="nav-item hidden">
 	                        <button type="button" class="custom-link" data-toggle="modal" data-target="#modalfiltros">
 	                        	<i class="fa fa-filter"></i>
 	                    	</button>
@@ -73,7 +73,7 @@
 	                </ul>
 	            </div>
 
-	            <!--Ventana modal-->
+	            <!--Ventana modal filtros-->
 	            <div class="modal fade" id="modalfiltros">
 				  <div class="modal-dialog modal-dialog-centered" role="document">
 				    <div class="modal-content">
@@ -122,6 +122,42 @@
 				    </div>
 				  </div>
 	            </div>
+
+	            <!--Ventana modal mis listas-->
+	            <div class="modal fade" id="user-lists-modal">
+				  <div class="modal-dialog modal-dialog-centered" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="title">Mis listas</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+						<!--Select mis listas-->
+						<div class="form-group">
+							<div class="input-group">
+								<select multiple class="form-control"  id="film-genre">
+									<option value="list1">List 1</option>
+									<option value="list2">List 2</option>
+								</select>
+							</div>
+						</div>
+						<!--Crear lista-->
+						<div class="form-group">
+							<div class="input-group">
+								<button class="custom-btn mr-2">Add list</button>
+								<input type="text" class="form-control" placeholder="name" id="film-trailer">
+							</div>
+						</div>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="custom-btn" data-dismiss="modal">cerrar</button>
+				      </div>
+				    </div>
+				  </div>
+	            </div>
+
 
 	            <div class="container-fluid">
 		            <!--contents-->
@@ -310,6 +346,27 @@
 							</div>
 							<!--APLICAR FILTROS-->
 							<button class="custom-btn mt-2" id="apply-filters">Aplicar filtros</button>
+							<button class="custom-btn" data-toggle="collapse" data-target="#user-lists">My lists</button>
+							<hr>
+							<!--COLLAPSE-->
+							<div class="collapse mt-2" id="user-lists">
+								<!--Select mis listas-->
+								<div class="form-group">
+									<div class="input-group">
+										<select multiple class="form-control"  id="film-genre">
+											<option value="list1">List 1</option>
+										  	<option value="list2">List 2</option>
+										</select>
+									</div>
+								</div>
+								<!--Crear lista-->
+								<div class="form-group">
+									<div class="input-group">
+										<button class="custom-btn mr-2">Add list</button>
+										<input type="text" class="form-control" placeholder="name" id="film-trailer">
+									</div>
+								</div>
+							</div>
 						</div>
 
 					</div>
