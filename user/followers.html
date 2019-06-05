@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Followers</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Bootstrap CSS-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+		<!--Font awesome-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!--Main CSS-->
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<!--Google fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<!--Pretty checkboxes-->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+		<!--Favicon-->
+		<link rel="icon" href="../img/dbfilms.ico" type="image/x-icon">
+	</head>
+
+	<body>
+
+		<div id="body">
+
+			<!--Navbar-->
+			<nav class="navbar navbar-expand-md">
+				<span id="nav_logo" class="navbar-brand"></span>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content">
+					<i class="fa fa-bars" id="menu-ico"></i>
+				</button>
+				<!--izquierda-->
+				<div class="collapse navbar-collapse" id="nav-content">
+					<a href="../series.html" class="custom-link">Home</a>
+					<!--Usuario // dropdown-->
+					<div class="dropdown ml-auto">
+						<button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img class="rounded-circle ml-auto user-img" src="../img/user.png" alt="user-img">
+					  		<span class="caret"></span>
+						</button>
+					  	<div class="dropdown-menu dropdown-menu-right">
+					    	<a class="dropdown-item" href="../admin/perfil.html">Perfil</a>
+					    	<a class="dropdown-item" href="../admin/usuarios.html">Administrar usuarios</a>
+					    	<a class="dropdown-item" href="../admin/contenido.html">Añadir contenido</a>
+					    	<div class="dropdown-divider"></div>
+					    	<a class="dropdown-item" href="../index.html">Cerrar sesión</a>
+					  	</div>
+					</div>
+				</div>
+			</nav>
+
+			<!--Contenedor principal-->
+			<div class="container-fluid mt-4">
+				<!--Cabecera-->
+		        <div class="table-title">
+		            <div class="row">
+		                <div class="col-sm-12">
+							<h2>Followers</h2>
+						</div>
+		            </div>
+		        </div>
+				<div class="table-responsive">
+		            <!--Tabla de usuarios-->
+					<table class="table table-borderless table-hover tabla text-center">
+						<!--PRIMERA ROW / CABECERA-->
+	  					<thead class="">
+	    					<tr>
+	    						<th scope="col">Photo</th>
+						      	<th scope="col">Nick</th>
+						     	<th scope="col">Email</th>
+						      	<th scope="col">Request</th>
+						      	<th scope="col">Message</th>
+						      	<th scope="col">Delete</th>
+	    					</tr>
+	  					</thead>
+	  					<!--CUERPO-->
+	  					<tbody>
+						    <tr>
+						    	<!--Row 1-->
+						    	<td><img src="../img/user.png" class="user-img"></td>
+						      	<td>Mark</td>
+						      	<td>Mark@gmail.com</td>
+						      	<td>
+						      		<!--ADD FRIEND BTN-->
+						      		<button class="custom-btn"><i class="fas fa-user-plus"></i></button>
+						      	</td>
+						      	<td>
+						      		<!--SEND MSG BTN-->
+						      		<button class="custom-btn"><i class="fa fa-envelope"></i></button>
+						      	</td>
+						      	<td>
+						      		<!--DELETE BTN-->
+						      		<button class="custom-danger"><i class="fa fa-trash"></i></button>
+						      	</td>
+						    </tr>
+						    <!--Row 2-->
+						    <tr>
+						    	<td><img src="../img/user.png" class="user-img"></td>
+						      	<td>Mark</td>
+						      	<td>Mark@gmail.com</td>
+						      	<td>
+						      		<!--ADD FRIEND BTN-->
+						      		<button class="custom-btn"><i class="fas fa-user-plus"></i></button>
+						      	</td>
+						      	<td>
+						      		<!--SEND MSG BTN-->
+						      		<button class="custom-btn"><i class="fa fa-envelope"></i></button>
+						      	</td>
+						      	<td>
+						      		<!--DELETE BTN-->
+						      		<button class="custom-danger"><i class="fa fa-trash"></i></button>
+						      	</td>
+						    </tr>
+						    <!--Row 3-->
+						    <tr>
+						    	<td><img src="../img/user.png" class="user-img"></td>
+						      	<td>Mark</td>
+						      	<td>Mark@gmail.com</td>
+						      	<td>
+						      		<!--ADD FRIEND BTN-->
+						      		<button class="custom-btn"><i class="fas fa-user-plus"></i></button>
+						      	</td>
+						      	<td>
+						      		<!--SEND MSG BTN-->
+						      		<button class="custom-btn"><i class="fa fa-envelope"></i></button>
+						      	</td>
+						      	<td>
+						      		<!--DELETE BTN-->
+						      		<button class="custom-danger"><i class="fa fa-trash"></i></button>
+						      	</td>
+						    </tr>
+					  	</tbody>
+					</table>	
+
+				</div>
+
+			<!--Final del contenedor-->
+			</div>
+
+		<!--End body-->
+		</div>
+
+	    <!--Scripts de bootstrap-->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	    <!--Main js-->
+		<script type="text/javascript" src="js/js.js"></script>
+	</body>
+</html>
