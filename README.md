@@ -15,3 +15,6 @@ Link de la APP:
 
 El backend está hecho con Laravel, y lo demás con Angular, HTML y Bootstrap
 - https://github.com/alexgaya/dbfilms-laravel
+
+Script de la BBDD:
+- https://github.com/ach74/BaseDatos
